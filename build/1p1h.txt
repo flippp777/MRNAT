@@ -1,0 +1,196 @@
+phi_mu:           00001111 = 0123
+phi_nu:           00010111 = 0124
+Hole b:           00000001 = 0
+Particle a:       00000001 = 0
+Hole s:           00010000 = 4
+Particle r:       00001000 = 3
+
+phi_nu^{ar}_{bs}: 00001111
+
+phi_mu =           {0123}
+phi_nu^{ar}_{bs} = {0123}
+Permutations: 0
+<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+phi_mu:           00001111 = 0123
+phi_nu:           00010111 = 0124
+Hole b:           00000001 = 0
+Particle a:       00001000 = 3
+Hole s:           00010000 = 4
+Particle r:       00000001 = 0
+
+phi_nu^{ar}_{bs}: 00001111
+
+phi_mu =           {0123}
+phi_nu^{ar}_{bs} = {3120}
+Permutations: 5
+<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+phi_mu:           00001111 = 0123
+phi_nu:           00010111 = 0124
+Hole b:           00000010 = 1
+Particle a:       00000010 = 1
+Hole s:           00010000 = 4
+Particle r:       00001000 = 3
+
+phi_nu^{ar}_{bs}: 00001111
+
+phi_mu =           {0123}
+phi_nu^{ar}_{bs} = {0123}
+Permutations: 0
+<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+phi_mu:           00001111 = 0123
+phi_nu:           00010111 = 0124
+Hole b:           00000010 = 1
+Particle a:       00001000 = 3
+Hole s:           00010000 = 4
+Particle r:       00000010 = 1
+
+phi_nu^{ar}_{bs}: 00001111
+
+phi_mu =           {0123}
+phi_nu^{ar}_{bs} = {0321}
+Permutations: 3
+<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+phi_mu:           00001111 = 0123
+phi_nu:           00010111 = 0124
+Hole b:           00000100 = 2
+Particle a:       00000100 = 2
+Hole s:           00010000 = 4
+Particle r:       00001000 = 3
+
+phi_nu^{ar}_{bs}: 00001111
+
+phi_mu =           {0123}
+phi_nu^{ar}_{bs} = {0123}
+Permutations: 0
+<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+phi_mu:           00001111 = 0123
+phi_nu:           00010111 = 0124
+Hole b:           00000100 = 2
+Particle a:       00001000 = 3
+Hole s:           00010000 = 4
+Particle r:       00000100 = 2
+
+phi_nu^{ar}_{bs}: 00001111
+
+phi_mu =           {0123}
+phi_nu^{ar}_{bs} = {0132}
+Permutations: 1
+<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+phi_mu:           00001111 = 0123
+phi_nu:           00010111 = 0124
+Hole b:           00010000 = 4
+Particle a:       00001000 = 3
+Hole s:           00000001 = 0
+Particle r:       00000001 = 0
+
+phi_nu^{ar}_{bs}: 00001111
+
+phi_mu =           {0123}
+phi_nu^{ar}_{bs} = {0123}
+Permutations: 0
+<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+phi_mu:           00001111 = 0123
+phi_nu:           00010111 = 0124
+Hole b:           00010000 = 4
+Particle a:       00001000 = 3
+Hole s:           00000010 = 1
+Particle r:       00000010 = 1
+
+phi_nu^{ar}_{bs}: 00001111
+
+phi_mu =           {0123}
+phi_nu^{ar}_{bs} = {0123}
+Permutations: 0
+<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+phi_mu:           00001111 = 0123
+phi_nu:           00010111 = 0124
+Hole b:           00010000 = 4
+Particle a:       00001000 = 3
+Hole s:           00000100 = 2
+Particle r:       00000100 = 2
+
+phi_nu^{ar}_{bs}: 00001111
+
+phi_mu =           {0123}
+phi_nu^{ar}_{bs} = {0123}
+Permutations: 0
+<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+phi_mu:           00001111 = 0123
+phi_nu:           00010111 = 0124
+Hole b:           00010000 = 4
+Particle a:       00001000 = 3
+Hole s:           00001000 = 3
+Particle r:       00001000 = 3
+
+phi_nu^{ar}_{bs}: 00001111
+
+phi_mu =           {0123}
+phi_nu^{ar}_{bs} = {0123}
+Permutations: 0
+<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+phi_mu:           00001111 = 0123
+phi_nu:           00010111 = 0124
+Hole b:           00010000 = 4
+Particle a:       00010000 = 4
+Hole s:           00010000 = 4
+Particle r:       00001000 = 3
+
+phi_nu^{ar}_{bs}: 00001111
+
+phi_mu =           {0123}
+phi_nu^{ar}_{bs} = {0123}
+Permutations: 0
+<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+phi_mu:           00001111 = 0123
+phi_nu:           00010111 = 0124
+Hole b:           00010000 = 4
+Particle a:       00100000 = 5
+Hole s:           00100000 = 5
+Particle r:       00001000 = 3
+
+phi_nu^{ar}_{bs}: 00001111
+
+phi_mu =           {0123}
+phi_nu^{ar}_{bs} = {0123}
+Permutations: 0
+<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+phi_mu:           00001111 = 0123
+phi_nu:           00010111 = 0124
+Hole b:           00010000 = 4
+Particle a:       01000000 = 6
+Hole s:           01000000 = 6
+Particle r:       00001000 = 3
+
+phi_nu^{ar}_{bs}: 00001111
+
+phi_mu =           {0123}
+phi_nu^{ar}_{bs} = {0123}
+Permutations: 0
+<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+phi_mu:           00001111 = 0123
+phi_nu:           00010111 = 0124
+Hole b:           00010000 = 4
+Particle a:       10000000 = 7
+Hole s:           10000000 = 7
+Particle r:       00001000 = 3
+
+phi_nu^{ar}_{bs}: 00001111
+
+phi_mu =           {0123}
+phi_nu^{ar}_{bs} = {0123}
+Permutations: 0
+<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
