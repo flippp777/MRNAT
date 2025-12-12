@@ -51,9 +51,6 @@ main ()
   toB (phi4b, phi4, kmax);
   toB (phi6b, phi6, kmax);
 
-  printb (phi0b, smax);
-  printf ("\n");
-
   mpz_t phib[4];
   for (int i = 0; i < 4; i++)
     {
@@ -65,11 +62,6 @@ main ()
   mpz_set (phib[2], phi4b);
   mpz_set (phib[3], phi6b);
 
-  for (int i = 0; i < Mref; i++)
-    {
-      printb (phib[i], smax);
-      printf ("\n");
-    }
 
   FILE *f1 = fopen ("bruteForceBitEval_smax8_kmax4.txt", "w");
   bruteForce_printToFile_2p2h (f1, smax, phi, phib, kmax, Mref);

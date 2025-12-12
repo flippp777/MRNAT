@@ -47,7 +47,6 @@ bruteForce_printToFile_2p2h (FILE *fptr, int smax, int **phi, mpz_t phib[],
               mpz_combit (tmp_b, b);
 
               for (a = 0; a < smax; a++)
-        printf("2");
                 {
                   mpz_set (tmp_a, tmp_b);
                   if (mpz_tstbit (tmp_a, a) == 1)
@@ -70,7 +69,6 @@ bruteForce_printToFile_2p2h (FILE *fptr, int smax, int **phi, mpz_t phib[],
 
                           if (mpz_cmp (tmp_r, phib[mu]) == 0)
                             {
-
                               // phi_nu with its 2p-2h "excitations"
                               int phi_nu[kmax];
                               excite_2p2h (phi_nu, phi, nu, kmax, b, a, s, r);
@@ -152,5 +150,5 @@ bruteForce_printToFile_2p2h (FILE *fptr, int smax, int **phi, mpz_t phib[],
             }
         }
     }
-  mpz_clears (tmp_b, tmp_a, tmp_s, tmp_r, stateB);
+  mpz_clears (tmp_b, tmp_a, tmp_s, tmp_r, stateB, NULL);
 }
