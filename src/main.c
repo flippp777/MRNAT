@@ -1,5 +1,6 @@
 #include "../include/bruteForce_eval.h"
 #include "../include/bruteForce_printToFile.h"
+#include "../include/count_bits_right.h"
 #include "../include/printb.h"
 #include "../include/symm_eval.h"
 #include "../include/symm_printToFile.h"
@@ -79,6 +80,7 @@ main ()
   //
   // bruteForce_eval_3p3h(states, statesb, smax, phi, phib, kmax, Mref);
   // symm_eval_3p3h(states, statesb, smax, phi, phib, kmax, Mref);
+
 
   free (phi);
 }
