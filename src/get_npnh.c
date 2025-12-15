@@ -12,7 +12,7 @@ get_npnh(int particles[],
   int hole_idx = 0;
   int particle_idx = 0;
 
-  for (int i; i < two_n; i++) {
+  for (int i = 0; i < two_n; i++) {
     state_idx = mpz_scan1(phi_ph, state_idx);
 
     if (mpz_tstbit(phi_nub, state_idx) == 1) {
