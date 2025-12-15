@@ -22,5 +22,6 @@ get_npnh(int particles[],
       particles[particle_idx] = state_idx;
       particle_idx++;
     }
+    state_idx++;
   }
 }
