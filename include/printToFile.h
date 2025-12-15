@@ -15,9 +15,7 @@ printToFile(FILE* fptr,
             int a,
             int s,
             int r,
-            mpz_t tmp_b,
-            mpz_t tmp_a,
-            mpz_t tmp_s,
-            mpz_t tmp_r);
+            mpz_t phi_nub_exc,
+            int sign);
 
 #endif // !PRINTTOFILE

@@ -1,4 +1,5 @@
 #include "../include/bruteForce_printToFile.h"
+#include "../include/count_bits_right.h"
 #include "../include/printToFile.h"
 #include "../include/printb.h"
 #include <gmp.h>
@@ -63,6 +64,16 @@ bruteForce_printToFile_2p2h(FILE* fptr,
 
               if (mpz_cmp(tmp_r, phib[mu]) == 0) {
 
+                int perm =
+                  count_bits_right(tmp_b, b) + count_bits_right(tmp_a, a) +
+                  count_bits_right(tmp_s, s) + count_bits_right(tmp_r, r);
+                int sign;
+                if (perm % 2 == 0) {
+                  sign = 1;
+                } else {
+                  sign = -1;
+                }
+
                 printToFile(fptr,
                             phib,
                             smax,
@@ -74,10 +85,8 @@ bruteForce_printToFile_2p2h(FILE* fptr,
                             a,
                             s,
                             r,
-                            tmp_b,
-                            tmp_a,
-                            tmp_s,
-                            tmp_r);
+                            tmp_r,
+                            sign);
               }
             }
           }

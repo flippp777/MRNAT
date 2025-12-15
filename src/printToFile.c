@@ -1,9 +1,7 @@
 #include "../include/printToFile.h"
-#include "../include/count_bits_right.h"
 #include "../include/excite.h"
 #include "../include/printb.h"
 #include <gmp.h>
-#include <math.h>
 #include <stdio.h>
 
 void
@@ -18,10 +16,8 @@ printToFile(FILE* fptr,
             int a,
             int s,
             int r,
-            mpz_t tmp_b,
-            mpz_t tmp_a,
-            mpz_t tmp_s,
-            mpz_t tmp_r)
+            mpz_t phi_nub_exc,
+            int sign)
 {
   // phi_nu with its 2p-2h "excitations"
   int phi_nu[kmax];
@@ -76,7 +72,7 @@ printToFile(FILE* fptr,
   fprintf(fptr, "\n");
 
   fprintf(fptr, "phi_nu^{ar}_{bs}: ");
-  fprintb(fptr, tmp_r, smax);
+  fprintb(fptr, phi_nub_exc, smax);
   fprintf(fptr, "\n");
   fprintf(fptr, "\n");
   fprintf(fptr, "phi_mu =           {");
@@ -91,12 +87,9 @@ printToFile(FILE* fptr,
   fprintf(fptr, "}\n");
 
   // Permutations for destroying and inserting + sorting
-  int perm = count_bits_right(tmp_b, b) + count_bits_right(tmp_a, a) +
-             count_bits_right(tmp_s, s) + count_bits_right(tmp_r, r);
 
-  fprintf(fptr, "Permutations: %d", (int)perm);
   fprintf(fptr, "\n");
-  fprintf(fptr, "<phi_mu|phi_nu^{ar}_{bs}> = %f", pow(-1, perm));
+  fprintf(fptr, "<phi_mu|phi_nu^{ar}_{bs}> = %d", sign);
   fprintf(fptr, "\n");
   fprintf(fptr, "\n");
 
