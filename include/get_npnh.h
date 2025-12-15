@@ -3,8 +3,8 @@
 #include <gmp.h>
 
 void
-get_npnh(mpz_t particles[],
-         mpz_t holes[],
+get_npnh(int particles[],
+         int holes[],
          int two_n,
          int smax,
          mpz_t phi_ph,

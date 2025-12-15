@@ -1,8 +1,8 @@
 #include "../include/get_npnh.h"
 #include <gmp.h>
 void
-get_npnh(mpz_t particles[],
-         mpz_t holes[],
+get_npnh(int particles[],
+         int holes[],
          int two_n,
          int smax,
          mpz_t phi_ph,
@@ -16,10 +16,10 @@ get_npnh(mpz_t particles[],
     state_idx = mpz_scan1(phi_ph, state_idx);
 
     if (mpz_tstbit(phi_nub, state_idx) == 1) {
-      mpz_setbit(holes[hole_idx], state_idx);
+      holes[hole_idx] = state_idx;
       hole_idx++;
     } else {
-      mpz_setbit(particles[particle_idx], state_idx);
+      particles[particle_idx] = state_idx;
       particle_idx++;
     }
   }
