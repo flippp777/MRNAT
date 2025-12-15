@@ -5,7 +5,6 @@
 #include "../include/printb.h"
 #include "../include/symm_printToFile.h"
 #include <gmp.h>
-#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -20,8 +19,6 @@ symm_printToFile_2p2h(FILE* fptr,
 {
   int mu; // Index for SD mu
   int nu; // Index for SD nu
-  int a;  // Index for particle a
-  int r;  // Index for paritcle r
   int b;  // Index for hole b
   int s;  // Index for hole s
 

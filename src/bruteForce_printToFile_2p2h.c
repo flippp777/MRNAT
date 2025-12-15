@@ -121,6 +121,7 @@ bruteForce_printToFile_2p2h(FILE* fptr,
             } // s
           } // a
         } // b
+      } // if ph_num
       if (ph_num == 2) {
         p1h++;
         for (b = 0; b < smax; b++) {
@@ -184,6 +185,7 @@ bruteForce_printToFile_2p2h(FILE* fptr,
             } // s
           } // a
         } // b
+      } // if ph_num
       if (ph_num == 0) {
         p0h++;
         for (b = 0; b < smax; b++) {

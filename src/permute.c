@@ -29,7 +29,7 @@ permute(int** perms, int* arr, int start, int n, int perm_count)
 {
   perms = malloc(perm_count * sizeof(int*));
   for (int i = 0; i < perm_count; i++) {
-    perms[i] = malloc(n * sizeof(int));
+    perms[i] = calloc(n, sizeof(int));
   }
   int count = 0;
 
@@ -81,9 +81,9 @@ permute_ptr_rek(int*** perms, int** arr, int start, int n, int perm_count, int* 
 void
 permute_ptr(int*** perms, int** arr, int start, int n, int perm_count)
 {
-  perms = malloc(perm_count * sizeof(int*));
+  perms = malloc(perm_count * sizeof(int**));
   for (int i = 0; i < perm_count; i++) {
-    perms[i] = malloc(n * sizeof(int));
+    perms[i] = calloc(n, sizeof(int*));
   }
   int count = 0;
 
