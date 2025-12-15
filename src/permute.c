@@ -24,10 +24,10 @@ permute_rek(int** perms, int* arr, int start, int n, int perm_count, int* count)
   }
 }
 
-void
-permute(int** perms, int* arr, int start, int n, int perm_count)
+int**
+permute(int* arr, int start, int n, int perm_count)
 {
-  perms = malloc(perm_count * sizeof(int*));
+  int** perms = malloc(perm_count * sizeof(int*));
   for (int i = 0; i < perm_count; i++) {
     perms[i] = calloc(n, sizeof(int));
   }
@@ -38,7 +38,7 @@ permute(int** perms, int* arr, int start, int n, int perm_count)
     for (int i = 0; i < n; i++)
       perms[count][i] = arr[i];
     count++;
-    return;
+    return perms;
   }
 
   for (int i = start; i < n; i++) {
@@ -52,6 +52,8 @@ permute(int** perms, int* arr, int start, int n, int perm_count)
     arr[start] = arr[i];
     arr[i] = tmp;
   }
+
+  return perms;
 }
 
 void
@@ -78,10 +80,10 @@ permute_ptr_rek(int*** perms, int** arr, int start, int n, int perm_count, int* 
   }
 }
 
-void
-permute_ptr(int*** perms, int** arr, int start, int n, int perm_count)
+int***
+permute_ptr(int** arr, int start, int n, int perm_count)
 {
-  perms = malloc(perm_count * sizeof(int**));
+  int*** perms = malloc(perm_count * sizeof(int**));
   for (int i = 0; i < perm_count; i++) {
     perms[i] = calloc(n, sizeof(int*));
   }
@@ -92,7 +94,7 @@ permute_ptr(int*** perms, int** arr, int start, int n, int perm_count)
     for (int i = 0; i < n; i++)
       perms[count][i] = arr[i];
     count++;
-    return;
+    return perms;
   }
 
   for (int i = start; i < n; i++) {
@@ -106,4 +108,6 @@ permute_ptr(int*** perms, int** arr, int start, int n, int perm_count)
     arr[start] = arr[i];
     arr[i] = tmp;
   }
+
+  return perms;
 }
