@@ -58,33 +58,24 @@ symm_printToFile_2p2h(FILE* fptr,
         // All permutations of particles and holes
         int perm_count = 2; // 2!
 
-        int** h_perms = malloc(perm_count * sizeof(int*));
-        for (int i = 0; i < perm_count; i++) {
-          h_perms[i] = malloc(n * sizeof(int));
-        }
-        int count = 0;
-        permute(holes, 0, n, h_perms, &count);
+        int** h_perms;
+        permute(h_perms, holes, 0, n, perm_count);
 
-        int** p_perms = malloc(perm_count * sizeof(int*));
-        for (int i = 0; i < perm_count; i++) {
-          p_perms[i] = malloc(n * sizeof(int));
-        }
-        count = 0;
-        permute(particles, 0, n, p_perms, &count);
+        int** p_perms;
+        permute(p_perms, particles, 0, n, perm_count);
 
         // 4 contributions
         // phi_nu with its 2p-2h "excitations"
-        for (int hi = 0; hi < 2; hi++) {
-          int phi_nu[kmax];
+        for (int hi = 0; hi < perm_count; hi++) {
           mpz_t phi_nub_exc;
           mpz_init_set(phi_nub_exc, phi_nub);
-          for (int pi = 0; pi < 2; pi++) {
+          for (int pi = 0; pi < perm_count; pi++) {
             int perm = 0;
             for (int i = 0; i < n; i++) {
-              mpz_combit(phi_nub_exc, h_perms[hi][i]);
+              mpz_clrbit(phi_nub_exc, h_perms[hi][i]);
               perm += count_bits_right(phi_nub_exc, h_perms[hi][i]);
 
-              mpz_combit(phi_nub_exc, p_perms[pi][i]);
+              mpz_setbit(phi_nub_exc, p_perms[pi][i]);
               perm += count_bits_right(phi_nub_exc, p_perms[pi][i]);
             }
             int sign;
@@ -112,350 +103,71 @@ symm_printToFile_2p2h(FILE* fptr,
         // 1p1h difference
         if (ph_num == 2) {
 
-          int ph_states[2];
-          int ph_statesb[2];
-          int ph_states_idx = 0;
-          for (int i = 0; i < smax; i++) {
-            if ((ph & 1) == 1) {
-              ph_states[ph_states_idx] = states[i];
-              ph_statesb[ph_states_idx] = statesb[i];
-              ph_states_idx++;
-            }
-            if (ph_states_idx == 2) {
-              break;
-            }
-            ph >>= 1;
-          }
-
           int p_state;
-          int p_stateb;
           int h_state;
-          int h_stateb;
-          for (int i = 0; i < 2; i++) {
-            if ((ph_statesb[i] & phib[nu]) == ph_statesb[i]) {
-              h_state = ph_states[i];
-              h_stateb = ph_statesb[i];
-            } else {
-              p_state = ph_states[i];
-              p_stateb = ph_statesb[i];
+          get_npnh(&p_state, &h_state, ph_num, smax, phi_ph, phi_nub);
+
+          int s;
+          int* particles[2] = { &s, &p_state };
+          int* holes[2] = { &s, &h_state };
+
+          int perm_count = 2; // 2!
+
+          int*** h_perms;
+          permute_ptr(h_perms, holes, 0, n, perm_count);
+
+          int*** p_perms;
+          permute_ptr(p_perms, particles, 0, n, perm_count);
+
+          for (s = 0; s < smax; s++) {
+            for (int hi = 0; hi < perm_count; hi++) {
+              mpz_t phi_nub_exc;
+              mpz_init_set(phi_nub_exc, phi_nub);
+
+              for (int pi = 0; pi < perm_count; pi++) {
+                int perm = 0;
+                int valid = 1;
+                for (int i = 0; i < n; i++) {
+                  if (mpz_tstbit(phi_nub, *h_perms[hi][i]) != 1) {
+                    valid = 0;
+                    break;
+                  }
+                  mpz_clrbit(phi_nub_exc, *h_perms[hi][i]);
+                  perm += count_bits_right(phi_nub_exc, *h_perms[hi][i]);
+
+                  if (mpz_tstbit(phi_nub_exc, *p_perms[pi][i]) != 0) {
+                    valid = 0;
+                    break;
+                  }
+                  mpz_setbit(phi_nub_exc, *p_perms[pi][i]);
+                  perm += count_bits_right(phi_nub_exc, *p_perms[pi][i]);
+                }
+                if (valid) {
+                  int sign;
+                  if (perm % 2 == 0) {
+                    sign = 1;
+                  } else {
+                    sign = -1;
+                  }
+                  printToFile(fptr,
+                              phib,
+                              smax,
+                              phi,
+                              kmax,
+                              mu,
+                              nu,
+                              *h_perms[hi][1],
+                              *p_perms[pi][1],
+                              *h_perms[hi][2],
+                              *p_perms[pi][2],
+                              phi_nub_exc,
+                              sign);
+                }
+              }
             }
-          }
-
-          // the c_i / c^dagger_j order implemented
-          // is c^d_r c_s c^d_a c_b
-          // case: b=a, r=p, s=h
-          //  so all cases where a h-state can be
-          //  annihilated and then a p-state created
-          int phi_nu[kmax];
-          for (int k = 0; k < kmax; k++) {
-            if (phi[nu][k] == h_state) {
-              phi_nu[k] = p_state;
-              phi_nub = phi_nub ^ h_stateb;
-              phi_nub = phi_nub ^ p_stateb;
-            } else {
-              phi_nu[k] = phi[nu][k];
-            }
-          }
-          int phib_nu = phib[nu];
-
-          int idx = 0;
-          while (phib_nu) {
-            if ((phib_nu & 1) == 1) {
-              fprintf(fptr, "phi_mu:           ");
-              fprintb(fptr, phib[mu], smax);
-              fprintf(fptr, " = ");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi[mu][i]);
-              }
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "phi_nu:           ");
-              fprintb(fptr, phib[nu], smax);
-              fprintf(fptr, " = ");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi[nu][i]);
-              }
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Hole b:           ");
-              fprintb(fptr, statesb[idx], smax);
-              fprintf(fptr, " = %d", states[idx]);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Particle a:       ");
-              fprintb(fptr, statesb[idx], smax);
-              fprintf(fptr, " = %d", states[idx]);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Hole s:           ");
-              fprintb(fptr, h_stateb, smax);
-              fprintf(fptr, " = %d", h_state);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Particle r:       ");
-              fprintb(fptr, p_stateb, smax);
-              fprintf(fptr, " = %d", p_state);
-              fprintf(fptr, "\n");
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "phi_nu^{ar}_{bs}: ");
-              fprintb(fptr, phi_nub, smax);
-              fprintf(fptr, "\n");
-              fprintf(fptr, "\n");
-              fprintf(fptr, "phi_mu =           {");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi[mu][i]);
-              }
-              fprintf(fptr, "}\n");
-              fprintf(fptr, "phi_nu^{ar}_{bs} = {");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi_nu[i]);
-              }
-              fprintf(fptr, "}\n");
-
-              // Track permutations and sorting for sign
-              int perm = 0;
-              insertionSort_perm(phi_nu, kmax, &perm);
-              fprintf(fptr, "Permutations: %d", perm);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "<phi_mu|phi_nu^{ar}_{bs}> = %f", pow(-1, perm));
-              fprintf(fptr, "\n");
-              fprintf(fptr, "\n");
-            }
-            idx++;
-            phib_nu >>= 1;
-          }
-          // The same happens for
-          // case: s=r, a=p, b=h
-          //  It has the same sign as before.
-          // (The factor will be different in
-          // the final implementation)
-          // and now the h- / p-summation states are
-          // annihilated / created after the ph-states
-          int phib_mu = phib[mu];
-
-          idx = 0;
-          while (phib_mu) {
-            if ((phib_mu & 1) == 1) {
-              fprintf(fptr, "phi_mu:           ");
-              fprintb(fptr, phib[mu], smax);
-              fprintf(fptr, " = ");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi[mu][i]);
-              }
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "phi_nu:           ");
-              fprintb(fptr, phib[nu], smax);
-              fprintf(fptr, " = ");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi[nu][i]);
-              }
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Hole b:           ");
-              fprintb(fptr, h_stateb, smax);
-              fprintf(fptr, " = %d", h_state);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Particle a:       ");
-              fprintb(fptr, p_stateb, smax);
-              fprintf(fptr, " = %d", p_state);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Hole s:           ");
-              fprintb(fptr, statesb[idx], smax);
-              fprintf(fptr, " = %d", states[idx]);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Particle r:       ");
-              fprintb(fptr, statesb[idx], smax);
-              fprintf(fptr, " = %d", states[idx]);
-              fprintf(fptr, "\n");
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "phi_nu^{ar}_{bs}: ");
-              fprintb(fptr, phi_nub, smax);
-              fprintf(fptr, "\n");
-              fprintf(fptr, "\n");
-              fprintf(fptr, "phi_mu =           {");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi[mu][i]);
-              }
-              fprintf(fptr, "}\n");
-              fprintf(fptr, "phi_nu^{ar}_{bs} = {");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi_nu[i]);
-              }
-              fprintf(fptr, "}\n");
-
-              // Track permutations and sorting for sign
-              int perm = 0;
-              insertionSort_perm(phi_nu, kmax, &perm);
-              fprintf(fptr, "Permutations: %d", perm);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "<phi_mu|phi_nu^{ar}_{bs}> = %f", pow(-1, perm));
-              fprintf(fptr, "\n");
-              fprintf(fptr, "\n");
-            }
-            idx++;
-            phib_mu >>= 1;
-          }
-          // case: b=r, a=p, s=h
-          // Now the summation state is destroyed and
-          // the p-state is created in its place, then
-          // the h-states is destroyed and the other
-          // summation state put in its place.
-          // It is the same as before but with the
-          // opposite sign.
-          int equal_holes = phib[mu] & phib[nu];
-
-          idx = 0;
-          while (equal_holes) {
-            if ((equal_holes & 1) == 1) {
-              fprintf(fptr, "phi_mu:           ");
-              fprintb(fptr, phib[mu], smax);
-              fprintf(fptr, " = ");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi[mu][i]);
-              }
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "phi_nu:           ");
-              fprintb(fptr, phib[nu], smax);
-              fprintf(fptr, " = ");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi[nu][i]);
-              }
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Hole b:           ");
-              fprintb(fptr, statesb[idx], smax);
-              fprintf(fptr, " = %d", states[idx]);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Particle a:       ");
-              fprintb(fptr, p_stateb, smax);
-              fprintf(fptr, " = %d", p_state);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Hole s:           ");
-              fprintb(fptr, h_stateb, smax);
-              fprintf(fptr, " = %d", h_state);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Particle r:       ");
-              fprintb(fptr, statesb[idx], smax);
-              fprintf(fptr, " = %d", states[idx]);
-              fprintf(fptr, "\n");
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "phi_nu^{ar}_{bs}: ");
-              fprintb(fptr, phi_nub, smax);
-              fprintf(fptr, "\n");
-              fprintf(fptr, "\n");
-              fprintf(fptr, "phi_mu =           {");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi[mu][i]);
-              }
-              fprintf(fptr, "}\n");
-              fprintf(fptr, "phi_nu^{ar}_{bs} = {");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi_nu[i]);
-              }
-              fprintf(fptr, "}\n");
-
-              // Track permutations and sorting for sign
-              int perm = 1;
-              insertionSort_perm(phi_nu, kmax, &perm);
-              fprintf(fptr, "Permutations: %d", perm);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "<phi_mu|phi_nu^{ar}_{bs}> = %f", pow(-1, perm));
-              fprintf(fptr, "\n");
-              fprintf(fptr, "\n");
-            }
-            idx++;
-            equal_holes >>= 1;
-          }
-          // case: s=a, r=p, b=h
-          // Here the summation states start
-          // with a p-creation so the contrubutions
-          // are determined by the number of p-states
-          // the sign should be opposite to the first
-          // two cases
-          int equal_particles = ~(phib[mu] | phib[nu]);
-
-          idx = 0;
-          for (int idx = 0; idx < smax; idx++) {
-            if ((equal_particles & 1) == 1) {
-              fprintf(fptr, "phi_mu:           ");
-              fprintb(fptr, phib[mu], smax);
-              fprintf(fptr, " = ");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi[mu][i]);
-              }
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "phi_nu:           ");
-              fprintb(fptr, phib[nu], smax);
-              fprintf(fptr, " = ");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi[nu][i]);
-              }
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Hole b:           ");
-              fprintb(fptr, h_stateb, smax);
-              fprintf(fptr, " = %d", h_state);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Particle a:       ");
-              fprintb(fptr, statesb[idx], smax);
-              fprintf(fptr, " = %d", states[idx]);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Hole s:           ");
-              fprintb(fptr, statesb[idx], smax);
-              fprintf(fptr, " = %d", states[idx]);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "Particle r:       ");
-              fprintb(fptr, p_stateb, smax);
-              fprintf(fptr, " = %d", p_state);
-              fprintf(fptr, "\n");
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "phi_nu^{ar}_{bs}: ");
-              fprintb(fptr, phi_nub, smax);
-              fprintf(fptr, "\n");
-              fprintf(fptr, "\n");
-              fprintf(fptr, "phi_mu =           {");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi[mu][i]);
-              }
-              fprintf(fptr, "}\n");
-              fprintf(fptr, "phi_nu^{ar}_{bs} = {");
-              for (int i = 0; i < kmax; i++) {
-                fprintf(fptr, "%d", phi_nu[i]);
-              }
-              fprintf(fptr, "}\n");
-
-              // Track permutations and sorting for sign
-              int perm = 0;
-              insertionSort_perm(phi_nu, kmax, &perm);
-              fprintf(fptr, "Permutations: %d", perm);
-              fprintf(fptr, "\n");
-
-              fprintf(fptr, "<phi_mu|phi_nu^{ar}_{bs}> = %f", pow(-1, perm));
-              fprintf(fptr, "\n");
-              fprintf(fptr, "\n");
-            }
-            equal_particles >>= 1;
           }
         }
+
         // 0p0h difference
         if (ph_num == 0) {
 
