@@ -19,7 +19,6 @@ symm_printToFile_2p2h(FILE* fptr,
 {
   int mu; // Index for SD mu
   int nu; // Index for SD nu
-  int b;  // Index for hole b
   int s;  // Index for hole s
 
   mpz_t phi_ph;
@@ -76,12 +75,10 @@ symm_printToFile_2p2h(FILE* fptr,
         // All permutations of particles and holes
         int perm_count = 2; // 2!
 
-        int** h_perms;
-        permute(h_perms, holes, 0, n, perm_count);
+        int** h_perms = permute(holes, 0, n, perm_count);
         p2h_steps += 2;
 
-        int** p_perms;
-        permute(p_perms, particles, 0, n, perm_count);
+        int** p_perms = permute(particles, 0, n, perm_count);
         p2h_steps += 2;
 
         // 4 contributions
@@ -116,156 +113,168 @@ symm_printToFile_2p2h(FILE* fptr,
                         kmax,
                         mu,
                         nu,
+                        h_perms[hi][0],
+                        p_perms[pi][0],
                         h_perms[hi][1],
                         p_perms[pi][1],
-                        h_perms[hi][2],
-                        p_perms[pi][2],
                         phi_nub_exc,
                         sign);
           }
         }
+        for (int i = 0; i < perm_count; i++) {
+          free(h_perms[i]);
+          free(p_perms[i]);
+        }
+        free(h_perms);
+        free(p_perms);
+      }
 
-        // 1p1h difference
-        if (ph_num == 2) {
-          p1h++;
+      // 1p1h difference
+      if (ph_num == 2) {
+        p1h++;
 
-          int p_state;
-          int h_state;
-          get_npnh(&p_state, &h_state, ph_num, smax, phi_ph, phi_nub);
+        int p_state;
+        int h_state;
+        get_npnh(&p_state, &h_state, ph_num, smax, phi_ph, phi_nub);
+        p1h_steps += 2;
+
+        int s;
+        int* particles[2] = { &s, &p_state };
+        int* holes[2] = { &s, &h_state };
+
+        int perm_size = 2;
+        int perm_count = 2; // 2!
+
+        int*** h_perms = permute_ptr(holes, 0, perm_size, perm_count);
+        p1h_steps += 2;
+
+        int*** p_perms = permute_ptr(particles, 0, perm_size, perm_count);
+        p1h_steps += 2;
+
+        for (s = 0; s < smax; s++) {
           p1h_steps += 2;
-
-          int s;
-          int* particles[2] = { &s, &p_state };
-          int* holes[2] = { &s, &h_state };
-
-          int perm_count = 2; // 2!
-
-          int*** h_perms;
-          permute_ptr(h_perms, holes, 0, n, perm_count);
-          p1h_steps += 2;
-
-          int*** p_perms;
-          permute_ptr(p_perms, particles, 0, n, perm_count);
-          p1h_steps += 2;
-
-          for (s = 0; s < smax; s++) {
+          for (int hi = 0; hi < perm_count; hi++) {
             p1h_steps += 2;
-            for (int hi = 0; hi < perm_count; hi++) {
+            mpz_set(phi_nub_exc, phi_nub);
+
+            for (int pi = 0; pi < perm_count; pi++) {
               p1h_steps += 2;
-              mpz_set(phi_nub_exc, phi_nub);
 
-              for (int pi = 0; pi < perm_count; pi++) {
-                p1h_steps += 2;
-
-                int perm = 0;
-                int valid = 1;
-                for (int i = 0; i < n; i++) {
-                  if (mpz_tstbit(phi_nub, *h_perms[hi][i]) != 1) {
-                    valid = 0;
-                    continue;
-                  }
-                  mpz_clrbit(phi_nub_exc, *h_perms[hi][i]);
-                  perm += count_bits_right(phi_nub_exc, *h_perms[hi][i]);
-
-                  if (mpz_tstbit(phi_nub_exc, *p_perms[pi][i]) != 0) {
-                    valid = 0;
-                    continue;
-                  }
-                  mpz_setbit(phi_nub_exc, *p_perms[pi][i]);
-                  perm += count_bits_right(phi_nub_exc, *p_perms[pi][i]);
+              int perm = 0;
+              int valid = 1;
+              for (int i = 0; i < perm_size; i++) {
+                if (mpz_tstbit(phi_nub, *h_perms[hi][i]) != 1) {
+                  valid = 0;
+                  continue;
                 }
-                if (valid) {
-                  p1h_contr++;
-                  int sign;
-                  if (perm % 2 == 0) {
-                    p1h_pos++;
-                    sign = 1;
-                  } else {
-                    p1h_neg++;
-                    sign = -1;
-                  }
-                  printToFile(fptr,
-                              phib,
-                              smax,
-                              phi,
-                              kmax,
-                              mu,
-                              nu,
-                              *h_perms[hi][1],
-                              *p_perms[pi][1],
-                              *h_perms[hi][2],
-                              *p_perms[pi][2],
-                              phi_nub_exc,
-                              sign);
+                mpz_clrbit(phi_nub_exc, *h_perms[hi][i]);
+                perm += count_bits_right(phi_nub_exc, *h_perms[hi][i]);
+
+                if (mpz_tstbit(phi_nub_exc, *p_perms[pi][i]) != 0) {
+                  valid = 0;
+                  continue;
                 }
+                mpz_setbit(phi_nub_exc, *p_perms[pi][i]);
+                perm += count_bits_right(phi_nub_exc, *p_perms[pi][i]);
+              }
+              if (valid) {
+                p1h_contr++;
+                int sign;
+                if (perm % 2 == 0) {
+                  p1h_pos++;
+                  sign = 1;
+                } else {
+                  p1h_neg++;
+                  sign = -1;
+                }
+                printToFile(fptr,
+                            phib,
+                            smax,
+                            phi,
+                            kmax,
+                            mu,
+                            nu,
+                            *h_perms[hi][0],
+                            *p_perms[pi][0],
+                            *h_perms[hi][1],
+                            *p_perms[pi][1],
+                            phi_nub_exc,
+                            sign);
               }
             }
           }
         }
 
-        // 0p0h difference
-        if (ph_num == 0) {
-          p0h++;
+        for (int i = 0; i < perm_count; i++) {
+          free(h_perms[i]);
+          free(p_perms[i]);
+        }
+        free(h_perms);
+        free(p_perms);
+      }
 
-          // The signs are now all positive
-          int b = 0;
-          for (int k = 0; k < kmax; k++) {
+      // 0p0h difference
+      if (ph_num == 0) {
+        p0h++;
+
+        // The signs are now all positive
+        int b = 0;
+        for (int k = 0; k < kmax; k++) {
+          p0h_steps++;
+          // b=h-state
+          b = mpz_scan1(phi_nub, 0);
+          for (s = 0; s < smax; s++) {
             p0h_steps++;
-            // b=h-state
-            b = mpz_scan1(phi_nub, 0);
-            for (s = 0; s < smax; s++) {
-              p0h_steps++;
-              // s=h-state
-              //  b=a & s=r
-              if (mpz_tstbit(phi_nub, s) == 1) {
-                p0h_contr++;
-                p0h_pos++;
-                mpz_clrbit(phi_nub_exc, b);
-                mpz_setbit(phi_nub_exc, b);
-                mpz_clrbit(phi_nub_exc, s);
-                mpz_clrbit(phi_nub_exc, s);
+            // s=h-state
+            //  b=a & s=r
+            if (mpz_tstbit(phi_nub, s) == 1) {
+              p0h_contr++;
+              p0h_pos++;
+              mpz_clrbit(phi_nub_exc, b);
+              mpz_setbit(phi_nub_exc, b);
+              mpz_clrbit(phi_nub_exc, s);
+              mpz_clrbit(phi_nub_exc, s);
 
-                printToFile(fptr,
-                            phib,
-                            smax,
-                            phi,
-                            kmax,
-                            mu,
-                            nu,
-                            b,
-                            b,
-                            s,
-                            s,
-                            phi_nub_exc,
-                            1);
-              }
-              // s=p-state
-              //  b=r & s=a
-              else {
-                p0h_contr++;
-                p0h_pos++;
-                mpz_clrbit(phi_nub_exc, b);
-                mpz_setbit(phi_nub_exc, s);
-                mpz_clrbit(phi_nub_exc, s);
-                mpz_clrbit(phi_nub_exc, b);
-
-                printToFile(fptr,
-                            phib,
-                            smax,
-                            phi,
-                            kmax,
-                            mu,
-                            nu,
-                            b,
-                            s,
-                            s,
-                            b,
-                            phi_nub_exc,
-                            1);
-              }
+              printToFile(fptr,
+                          phib,
+                          smax,
+                          phi,
+                          kmax,
+                          mu,
+                          nu,
+                          b,
+                          b,
+                          s,
+                          s,
+                          phi_nub_exc,
+                          1);
             }
-            b++;
+            // s=p-state
+            //  b=r & s=a
+            else {
+              p0h_contr++;
+              p0h_pos++;
+              mpz_clrbit(phi_nub_exc, b);
+              mpz_setbit(phi_nub_exc, s);
+              mpz_clrbit(phi_nub_exc, s);
+              mpz_clrbit(phi_nub_exc, b);
+
+              printToFile(fptr,
+                          phib,
+                          smax,
+                          phi,
+                          kmax,
+                          mu,
+                          nu,
+                          b,
+                          s,
+                          s,
+                          b,
+                          phi_nub_exc,
+                          1);
+            }
           }
+          b++;
         }
       }
     }
