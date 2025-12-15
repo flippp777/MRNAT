@@ -1,6 +1,8 @@
 #include "../include/permute.h"
-
-void permute(int *arr, int start, int n, int **perms, int *count) {
+#include <stdlib.h>
+void
+permute_rek(int** perms, int* arr, int start, int n, int perm_count, int* count)
+{
   if (start == n) {
     // Permutation speichern
     for (int i = 0; i < n; i++)
@@ -14,7 +16,7 @@ void permute(int *arr, int start, int n, int **perms, int *count) {
     arr[start] = arr[i];
     arr[i] = tmp;
 
-    permute(arr, start + 1, n, perms, count);
+    permute_rek(perms, arr, start + 1, n, perm_count, count);
 
     tmp = arr[start];
     arr[start] = arr[i];
@@ -22,13 +24,86 @@ void permute(int *arr, int start, int n, int **perms, int *count) {
   }
 }
 
-int permute_sign(int *arr, int n) {
-  int inv = 0;
-  for (int i = 0; i < n; i++) {
-    for (int j = i + 1; j < n; j++) {
-      if (arr[i] > arr[j])
-        inv++;
-    }
+void
+permute(int** perms, int* arr, int start, int n, int perm_count)
+{
+  perms = malloc(perm_count * sizeof(int*));
+  for (int i = 0; i < perm_count; i++) {
+    perms[i] = malloc(n * sizeof(int));
   }
-  return (inv % 2 == 0) ? 1 : -1;
+  int count = 0;
+
+  if (start == n) {
+    // Permutation speichern
+    for (int i = 0; i < n; i++)
+      perms[count][i] = arr[i];
+    count++;
+    return;
+  }
+
+  for (int i = start; i < n; i++) {
+    int tmp = arr[start];
+    arr[start] = arr[i];
+    arr[i] = tmp;
+
+    permute_rek(perms, arr, start + 1, n, perm_count, &count);
+
+    tmp = arr[start];
+    arr[start] = arr[i];
+    arr[i] = tmp;
+  }
+}
+
+void
+permute_ptr_rek(int*** perms, int** arr, int start, int n, int perm_count, int* count)
+{
+  if (start == n) {
+    // Permutation speichern
+    for (int i = 0; i < n; i++)
+      perms[*count][i] = arr[i];
+    (*count)++;
+    return;
+  }
+
+  for (int i = start; i < n; i++) {
+    int* tmp = arr[start];
+    arr[start] = arr[i];
+    arr[i] = tmp;
+
+    permute_ptr_rek(perms, arr, start + 1, n, perm_count, count);
+
+    tmp = arr[start];
+    arr[start] = arr[i];
+    arr[i] = tmp;
+  }
+}
+
+void
+permute_ptr(int*** perms, int** arr, int start, int n, int perm_count)
+{
+  perms = malloc(perm_count * sizeof(int*));
+  for (int i = 0; i < perm_count; i++) {
+    perms[i] = malloc(n * sizeof(int));
+  }
+  int count = 0;
+
+  if (start == n) {
+    // Permutation speichern
+    for (int i = 0; i < n; i++)
+      perms[count][i] = arr[i];
+    count++;
+    return;
+  }
+
+  for (int i = start; i < n; i++) {
+    int* tmp = arr[start];
+    arr[start] = arr[i];
+    arr[i] = tmp;
+
+    permute_ptr_rek(perms, arr, start + 1, n, perm_count, &count);
+
+    tmp = arr[start];
+    arr[start] = arr[i];
+    arr[i] = tmp;
+  }
 }
