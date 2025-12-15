@@ -12,8 +12,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 0
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -26,8 +26,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 2
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -40,8 +40,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -54,8 +54,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -68,8 +68,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -82,8 +82,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -96,8 +96,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -110,8 +110,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -124,8 +124,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 2
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -138,8 +138,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -152,8 +152,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -166,8 +166,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -180,8 +180,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -194,8 +194,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -208,8 +208,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -222,8 +222,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -236,8 +236,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -250,8 +250,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -264,8 +264,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -278,8 +278,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -292,8 +292,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -306,8 +306,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -320,8 +320,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -334,8 +334,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -348,8 +348,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -362,8 +362,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -376,8 +376,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -390,8 +390,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -404,8 +404,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -418,8 +418,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -432,8 +432,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00001111 = 0123
@@ -446,8 +446,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 ########## phi_nu = 00010111 ##########
 
@@ -462,8 +462,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00010111 = 0124
@@ -476,8 +476,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {3120}
-Permutations: 5
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00010111 = 0124
@@ -490,8 +490,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00010111 = 0124
@@ -504,8 +504,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0321}
-Permutations: 7
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00010111 = 0124
@@ -518,8 +518,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00010111 = 0124
@@ -532,8 +532,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0132}
-Permutations: 9
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00010111 = 0124
@@ -546,8 +546,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00010111 = 0124
@@ -560,8 +560,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00010111 = 0124
@@ -574,8 +574,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00010111 = 0124
@@ -588,8 +588,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00010111 = 0124
@@ -602,8 +602,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00010111 = 0124
@@ -616,8 +616,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00010111 = 0124
@@ -630,8 +630,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00010111 = 0124
@@ -644,8 +644,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 ########## phi_nu = 00110011 ##########
 
@@ -660,8 +660,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00110011 = 0145
@@ -674,8 +674,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0132}
-Permutations: 9
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00110011 = 0145
@@ -688,8 +688,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0132}
-Permutations: 11
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00001111 = 0123
 phi_nu:           00110011 = 0145
@@ -702,8 +702,8 @@ phi_nu^{ar}_{bs}: 00001111
 
 phi_mu =           {0123}
 phi_nu^{ar}_{bs} = {0123}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 ########## phi_nu = 01110001 ##########
 
@@ -721,8 +721,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00001111 = 0123
@@ -735,8 +735,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {4120}
-Permutations: 5
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00001111 = 0123
@@ -749,8 +749,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00001111 = 0123
@@ -763,8 +763,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0421}
-Permutations: 7
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00001111 = 0123
@@ -777,8 +777,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00001111 = 0123
@@ -791,8 +791,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0142}
-Permutations: 9
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00001111 = 0123
@@ -805,8 +805,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00001111 = 0123
@@ -819,8 +819,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00001111 = 0123
@@ -833,8 +833,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00001111 = 0123
@@ -847,8 +847,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00001111 = 0123
@@ -861,8 +861,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00001111 = 0123
@@ -875,8 +875,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00001111 = 0123
@@ -889,8 +889,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00001111 = 0123
@@ -903,8 +903,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 ########## phi_nu = 00010111 ##########
 
@@ -919,8 +919,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 0
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -933,8 +933,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 2
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -947,8 +947,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -961,8 +961,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -975,8 +975,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -989,8 +989,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1003,8 +1003,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1017,8 +1017,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1031,8 +1031,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 2
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1045,8 +1045,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1059,8 +1059,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1073,8 +1073,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1087,8 +1087,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1101,8 +1101,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1115,8 +1115,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1129,8 +1129,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1143,8 +1143,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1157,8 +1157,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1171,8 +1171,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1185,8 +1185,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1199,8 +1199,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1213,8 +1213,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1227,8 +1227,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1241,8 +1241,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1255,8 +1255,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1269,8 +1269,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1283,8 +1283,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1297,8 +1297,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1311,8 +1311,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1325,8 +1325,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1339,8 +1339,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00010111 = 0124
@@ -1353,8 +1353,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 ########## phi_nu = 00110011 ##########
 
@@ -1369,8 +1369,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0142}
-Permutations: 5
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00110011 = 0145
@@ -1383,8 +1383,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {2140}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00110011 = 0145
@@ -1397,8 +1397,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0142}
-Permutations: 7
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00110011 = 0145
@@ -1411,8 +1411,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0241}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00110011 = 0145
@@ -1425,8 +1425,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0124}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00110011 = 0145
@@ -1439,8 +1439,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0142}
-Permutations: 9
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00110011 = 0145
@@ -1453,8 +1453,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0142}
-Permutations: 5
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00110011 = 0145
@@ -1467,8 +1467,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0142}
-Permutations: 7
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00110011 = 0145
@@ -1481,8 +1481,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0142}
-Permutations: 9
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00110011 = 0145
@@ -1495,8 +1495,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0142}
-Permutations: 11
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00110011 = 0145
@@ -1509,8 +1509,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0142}
-Permutations: 9
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00110011 = 0145
@@ -1523,8 +1523,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0142}
-Permutations: 11
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00110011 = 0145
@@ -1537,8 +1537,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0142}
-Permutations: 11
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00010111 = 0124
 phi_nu:           00110011 = 0145
@@ -1551,8 +1551,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0142}
-Permutations: 11
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 ########## phi_nu = 01110001 ##########
 
@@ -1567,8 +1567,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0412}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00010111 = 0124
 phi_nu:           01110001 = 0456
@@ -1581,8 +1581,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0421}
-Permutations: 7
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00010111 = 0124
 phi_nu:           01110001 = 0456
@@ -1595,8 +1595,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0421}
-Permutations: 9
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00010111 = 0124
 phi_nu:           01110001 = 0456
@@ -1609,8 +1609,8 @@ phi_nu^{ar}_{bs}: 00010111
 
 phi_mu =           {0124}
 phi_nu^{ar}_{bs} = {0412}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 ########## phi_mu = 00110011 ##########
 ########## phi_nu = 00001111 ##########
@@ -1626,8 +1626,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00001111 = 0123
@@ -1640,8 +1640,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0154}
-Permutations: 9
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00001111 = 0123
@@ -1654,8 +1654,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0154}
-Permutations: 11
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00001111 = 0123
@@ -1668,8 +1668,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 ########## phi_nu = 00010111 ##########
 
@@ -1684,8 +1684,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0154}
-Permutations: 5
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00010111 = 0124
@@ -1698,8 +1698,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {5104}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00010111 = 0124
@@ -1712,8 +1712,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0154}
-Permutations: 7
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00010111 = 0124
@@ -1726,8 +1726,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0514}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00010111 = 0124
@@ -1740,8 +1740,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0154}
-Permutations: 9
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00010111 = 0124
@@ -1754,8 +1754,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0154}
-Permutations: 9
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00010111 = 0124
@@ -1768,8 +1768,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0154}
-Permutations: 5
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00010111 = 0124
@@ -1782,8 +1782,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0154}
-Permutations: 7
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00010111 = 0124
@@ -1796,8 +1796,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0154}
-Permutations: 9
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00010111 = 0124
@@ -1810,8 +1810,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0154}
-Permutations: 11
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00010111 = 0124
@@ -1824,8 +1824,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0154}
-Permutations: 11
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00010111 = 0124
@@ -1838,8 +1838,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0154}
-Permutations: 11
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00010111 = 0124
@@ -1852,8 +1852,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0154}
-Permutations: 11
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00010111 = 0124
@@ -1866,8 +1866,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 ########## phi_nu = 00110011 ##########
 
@@ -1882,8 +1882,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 0
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -1896,8 +1896,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 2
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -1910,8 +1910,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -1924,8 +1924,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -1938,8 +1938,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 2
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -1952,8 +1952,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 2
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -1966,8 +1966,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -1980,8 +1980,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -1994,8 +1994,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 2
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2008,8 +2008,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2022,8 +2022,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2036,8 +2036,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2050,8 +2050,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2064,8 +2064,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2078,8 +2078,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2092,8 +2092,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2106,8 +2106,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2120,8 +2120,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2134,8 +2134,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2148,8 +2148,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2162,8 +2162,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2176,8 +2176,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2190,8 +2190,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2204,8 +2204,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2218,8 +2218,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2232,8 +2232,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2246,8 +2246,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2260,8 +2260,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2274,8 +2274,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2288,8 +2288,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2302,8 +2302,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           00110011 = 0145
@@ -2316,8 +2316,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0145}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 ########## phi_nu = 01110001 ##########
 
@@ -2332,8 +2332,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0451}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           01110001 = 0456
@@ -2346,8 +2346,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {1450}
-Permutations: 3
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           01110001 = 0456
@@ -2360,8 +2360,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0154}
-Permutations: 7
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           01110001 = 0456
@@ -2374,8 +2374,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0451}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           01110001 = 0456
@@ -2388,8 +2388,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0415}
-Permutations: 9
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           00110011 = 0145
 phi_nu:           01110001 = 0456
@@ -2402,8 +2402,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0451}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           01110001 = 0456
@@ -2416,8 +2416,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0451}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           01110001 = 0456
@@ -2430,8 +2430,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0451}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           01110001 = 0456
@@ -2444,8 +2444,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0451}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           01110001 = 0456
@@ -2458,8 +2458,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0451}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           01110001 = 0456
@@ -2472,8 +2472,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0451}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           01110001 = 0456
@@ -2486,8 +2486,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0451}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           01110001 = 0456
@@ -2500,8 +2500,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0451}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           00110011 = 0145
 phi_nu:           01110001 = 0456
@@ -2514,8 +2514,8 @@ phi_nu^{ar}_{bs}: 00110011
 
 phi_mu =           {0145}
 phi_nu^{ar}_{bs} = {0451}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 ########## phi_mu = 01110001 ##########
 ########## phi_nu = 00001111 ##########
@@ -2533,8 +2533,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0564}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00010111 = 0124
@@ -2547,8 +2547,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0654}
-Permutations: 7
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00010111 = 0124
@@ -2561,8 +2561,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0654}
-Permutations: 9
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00010111 = 0124
@@ -2575,8 +2575,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0564}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 ########## phi_nu = 00110011 ##########
 
@@ -2591,8 +2591,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0645}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00110011 = 0145
@@ -2605,8 +2605,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {6045}
-Permutations: 3
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00110011 = 0145
@@ -2619,8 +2619,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0645}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00110011 = 0145
@@ -2633,8 +2633,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0645}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00110011 = 0145
@@ -2647,8 +2647,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0645}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00110011 = 0145
@@ -2661,8 +2661,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0645}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00110011 = 0145
@@ -2675,8 +2675,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0645}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00110011 = 0145
@@ -2689,8 +2689,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0645}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00110011 = 0145
@@ -2703,8 +2703,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0645}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00110011 = 0145
@@ -2717,8 +2717,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0645}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00110011 = 0145
@@ -2731,8 +2731,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0645}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00110011 = 0145
@@ -2745,8 +2745,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0465}
-Permutations: 7
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00110011 = 0145
@@ -2759,8 +2759,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0645}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           00110011 = 0145
@@ -2773,8 +2773,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0546}
-Permutations: 9
-<phi_mu|phi_nu^{ar}_{bs}> = -1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = -1
 
 ########## phi_nu = 01110001 ##########
 
@@ -2789,8 +2789,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 0
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -2803,8 +2803,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 2
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -2817,8 +2817,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -2831,8 +2831,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -2845,8 +2845,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 0
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -2859,8 +2859,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 0
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -2873,8 +2873,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 0
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -2887,8 +2887,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -2901,8 +2901,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -2915,8 +2915,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -2929,8 +2929,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -2943,8 +2943,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 2
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -2957,8 +2957,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -2971,8 +2971,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -2985,8 +2985,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -2999,8 +2999,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3013,8 +3013,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3027,8 +3027,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3041,8 +3041,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3055,8 +3055,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 4
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3069,8 +3069,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3083,8 +3083,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3097,8 +3097,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3111,8 +3111,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3125,8 +3125,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3139,8 +3139,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3153,8 +3153,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3167,8 +3167,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 6
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3181,8 +3181,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 8
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3195,8 +3195,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 10
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3209,8 +3209,8 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 
 phi_mu:           01110001 = 0456
 phi_nu:           01110001 = 0456
@@ -3223,6 +3223,6 @@ phi_nu^{ar}_{bs}: 01110001
 
 phi_mu =           {0456}
 phi_nu^{ar}_{bs} = {0456}
-Permutations: 12
-<phi_mu|phi_nu^{ar}_{bs}> = 1.000000
+
+<phi_mu|phi_nu^{ar}_{bs}> = 1
 

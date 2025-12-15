@@ -5,7 +5,6 @@
 
 void
 symm_printToFile_2p2h(FILE* fptr,
-                       int states[],
                        int smax,
                        int **phi,
                        mpz_t phib[],

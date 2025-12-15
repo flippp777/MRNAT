@@ -21,8 +21,25 @@ bruteForce_printToFile_2p2h(FILE* fptr,
   int b;  // Index for hole b
   int s;  // Index for hole s
 
-  mpz_t tmp_b, tmp_a, tmp_s, tmp_r;
-  mpz_inits(tmp_b, tmp_a, tmp_s, tmp_r, NULL);
+  mpz_t phi_ph, tmp_b, tmp_a, tmp_s, tmp_r;
+  mpz_inits(phi_ph, tmp_b, tmp_a, tmp_s, tmp_r, NULL);
+
+  // Values for comparisons
+  int p2h = 0; // Number of 2p2h case
+  int p2h_contr = 0;
+  int p2h_pos = 0;
+  int p2h_neg = 0;
+  int p2h_steps = 0;
+  int p1h = 0; // Number of 1p1h case
+  int p1h_contr = 0;
+  int p1h_pos = 0;
+  int p1h_neg = 0;
+  int p1h_steps = 0;
+  int p0h = 0; // Number of 0p0h case
+  int p0h_contr = 0;
+  int p0h_pos = 0;
+  int p0h_neg = 0;
+  int p0h_steps = 0;
 
   for (mu = 0; mu < Mref; mu++) {
     // Print current SD mu
@@ -38,61 +55,242 @@ bruteForce_printToFile_2p2h(FILE* fptr,
       fprintf(fptr, "\n");
       fprintf(fptr, "\n");
 
-      for (b = 0; b < smax; b++) {
-        mpz_set(tmp_b, phib[nu]);
-        if (mpz_tstbit(tmp_b, b) == 0)
-          continue;
-        mpz_combit(tmp_b, b);
-
-        for (a = 0; a < smax; a++) {
-          mpz_set(tmp_a, tmp_b);
-          if (mpz_tstbit(tmp_a, a) == 1)
+      mpz_xor(phi_ph, phib[mu], phib[nu]);
+      int ph_num = mpz_popcount(phi_ph); // Number #p#h excitations between SD's
+      //
+      if (ph_num == 4) {
+        p2h++;
+        for (b = 0; b < smax; b++) {
+          p2h_steps++;
+          mpz_set(tmp_b, phib[nu]);
+          if (mpz_tstbit(tmp_b, b) == 0)
             continue;
-          mpz_combit(tmp_a, a);
+          mpz_combit(tmp_b, b);
 
-          for (s = 0; s < smax; s++) {
-            mpz_set(tmp_s, tmp_a);
-            if (mpz_tstbit(tmp_s, s) == 0)
+          for (a = 0; a < smax; a++) {
+            p2h_steps++;
+            mpz_set(tmp_a, tmp_b);
+            if (mpz_tstbit(tmp_a, a) == 1)
               continue;
-            mpz_combit(tmp_s, s);
+            mpz_combit(tmp_a, a);
 
-            for (r = 0; r < smax; r++) {
-              mpz_set(tmp_r, tmp_s);
-              if (mpz_tstbit(tmp_r, r) == 1)
+            for (s = 0; s < smax; s++) {
+              p2h_steps++;
+              mpz_set(tmp_s, tmp_a);
+              if (mpz_tstbit(tmp_s, s) == 0)
                 continue;
-              mpz_combit(tmp_r, r);
+              mpz_combit(tmp_s, s);
 
-              if (mpz_cmp(tmp_r, phib[mu]) == 0) {
+              for (r = 0; r < smax; r++) {
+                p2h_steps++;
+                mpz_set(tmp_r, tmp_s);
+                if (mpz_tstbit(tmp_r, r) == 1)
+                  continue;
+                mpz_combit(tmp_r, r);
 
-                int perm =
-                  count_bits_right(tmp_b, b) + count_bits_right(tmp_a, a) +
-                  count_bits_right(tmp_s, s) + count_bits_right(tmp_r, r);
-                int sign;
-                if (perm % 2 == 0) {
-                  sign = 1;
-                } else {
-                  sign = -1;
-                }
+                if (mpz_cmp(tmp_r, phib[mu]) == 0) {
+                  p2h_contr++;
 
-                printToFile(fptr,
-                            phib,
-                            smax,
-                            phi,
-                            kmax,
-                            mu,
-                            nu,
-                            b,
-                            a,
-                            s,
-                            r,
-                            tmp_r,
-                            sign);
-              }
-            }
-          }
-        }
+                  int perm =
+                    count_bits_right(tmp_b, b) + count_bits_right(tmp_a, a) +
+                    count_bits_right(tmp_s, s) + count_bits_right(tmp_r, r);
+                  int sign;
+                  if (perm % 2 == 0) {
+                    p2h_pos++;
+                    sign = 1;
+                  } else {
+                    p2h_neg++;
+                    sign = -1;
+                  }
+
+                  printToFile(fptr,
+                              phib,
+                              smax,
+                              phi,
+                              kmax,
+                              mu,
+                              nu,
+                              b,
+                              a,
+                              s,
+                              r,
+                              tmp_r,
+                              sign);
+                } // if 
+              } // r
+            } // s
+          } // a
+        } // b
+      if (ph_num == 2) {
+        p1h++;
+        for (b = 0; b < smax; b++) {
+          p1h_steps++;
+          mpz_set(tmp_b, phib[nu]);
+          if (mpz_tstbit(tmp_b, b) == 0)
+            continue;
+          mpz_combit(tmp_b, b);
+
+          for (a = 0; a < smax; a++) {
+            p1h_steps++;
+            mpz_set(tmp_a, tmp_b);
+            if (mpz_tstbit(tmp_a, a) == 1)
+              continue;
+            mpz_combit(tmp_a, a);
+
+            for (s = 0; s < smax; s++) {
+              p1h_steps++;
+              mpz_set(tmp_s, tmp_a);
+              if (mpz_tstbit(tmp_s, s) == 0)
+                continue;
+              mpz_combit(tmp_s, s);
+
+              for (r = 0; r < smax; r++) {
+                p1h_steps++;
+                mpz_set(tmp_r, tmp_s);
+                if (mpz_tstbit(tmp_r, r) == 1)
+                  continue;
+                mpz_combit(tmp_r, r);
+
+                if (mpz_cmp(tmp_r, phib[mu]) == 0) {
+                  p1h_contr++;
+
+                  int perm =
+                    count_bits_right(tmp_b, b) + count_bits_right(tmp_a, a) +
+                    count_bits_right(tmp_s, s) + count_bits_right(tmp_r, r);
+                  int sign;
+                  if (perm % 2 == 0) {
+                    p1h_pos++;
+                    sign = 1;
+                  } else {
+                    p1h_neg++;
+                    sign = -1;
+                  }
+
+                  printToFile(fptr,
+                              phib,
+                              smax,
+                              phi,
+                              kmax,
+                              mu,
+                              nu,
+                              b,
+                              a,
+                              s,
+                              r,
+                              tmp_r,
+                              sign);
+                } // if 
+              } // r
+            } // s
+          } // a
+        } // b
+      if (ph_num == 0) {
+        p0h++;
+        for (b = 0; b < smax; b++) {
+          p0h_steps++;
+          mpz_set(tmp_b, phib[nu]);
+          if (mpz_tstbit(tmp_b, b) == 0)
+            continue;
+          mpz_combit(tmp_b, b);
+
+          for (a = 0; a < smax; a++) {
+            p0h_steps++;
+            mpz_set(tmp_a, tmp_b);
+            if (mpz_tstbit(tmp_a, a) == 1)
+              continue;
+            mpz_combit(tmp_a, a);
+
+            for (s = 0; s < smax; s++) {
+              p0h_steps++;
+              mpz_set(tmp_s, tmp_a);
+              if (mpz_tstbit(tmp_s, s) == 0)
+                continue;
+              mpz_combit(tmp_s, s);
+
+              for (r = 0; r < smax; r++) {
+                p0h_steps++;
+                mpz_set(tmp_r, tmp_s);
+                if (mpz_tstbit(tmp_r, r) == 1)
+                  continue;
+                mpz_combit(tmp_r, r);
+
+                if (mpz_cmp(tmp_r, phib[mu]) == 0) {
+                  p0h_contr++;
+
+                  int perm =
+                    count_bits_right(tmp_b, b) + count_bits_right(tmp_a, a) +
+                    count_bits_right(tmp_s, s) + count_bits_right(tmp_r, r);
+                  int sign;
+                  if (perm % 2 == 0) {
+                    p0h_pos++;
+                    sign = 1;
+                  } else {
+                    p0h_neg++;
+                    sign = -1;
+                  }
+
+                  printToFile(fptr,
+                              phib,
+                              smax,
+                              phi,
+                              kmax,
+                              mu,
+                              nu,
+                              b,
+                              a,
+                              s,
+                              r,
+                              tmp_r,
+                              sign);
+                } // if 
+              } // r
+            } // s
+          } // a
+        } // b
       }
     }
   }
   mpz_clears(tmp_b, tmp_a, tmp_s, tmp_r, NULL);
+
+  int cases = p2h + p1h + p0h;
+  int contributions = p2h_contr + p1h_contr + p0h_contr;
+  int steps = p2h_steps + p1h_steps + p0h_steps;
+
+  printf("### Brute Force Evaluation 2p2h ###\n");
+  printf("\n");
+
+  printf("Number of Cases:          %d  =>  100%%\n", cases);
+  printf("Number of Contributions:  %d  =>  100%%\n", contributions);
+  printf("Number of Steps:          %d  =>  100%%\n", steps);
+  printf("\n");
+
+  printf("  Number of 0p0h-Cases:         %d  =>  %f%%\n", p0h,
+         (float)p0h / cases * 100);
+  printf("  Number of 0p0h-Contributions: %d  =>  %f%%\n", p0h_contr,
+         (float)p0h_contr / contributions * 100);
+  printf("  Number of 0p0h-Steps:         %d  =>  %f%%\n", p0h_steps,
+         (float)p0h_steps / steps * 100);
+  printf("    Number of +1 0p0h-Contributions: %d\n", p0h_pos);
+  printf("    Number of -1 0p0h-Contributions: %d\n", p0h_neg);
+  printf("\n");
+
+  printf("  Number of 1p1h-Cases:         %d  =>  %f%%\n", p1h,
+         (float)p1h / cases * 100);
+  printf("  Number of 1p1h-Contributions: %d  =>  %f%%\n", p1h_contr,
+         (float)p1h_contr / contributions * 100);
+  printf("  Number of 1p1h-Steps:         %d  =>  %f%%\n", p1h_steps,
+         (float)p1h_steps / steps * 100);
+  printf("    Number of +1 1p1h-Contributions: %d\n", p1h_pos);
+  printf("    Number of -1 1p1h-Contributions: %d\n", p1h_neg);
+  printf("\n");
+
+  printf("  Number of 2p2h-Cases:         %d  =>  %f%%\n", p2h,
+         (float)p2h / cases * 100);
+  printf("  Number of 2p2h-Contributions: %d  =>  %f%%\n", p2h_contr,
+         (float)p2h_contr / contributions * 100);
+  printf("  Number of 2p2h-Steps:         %d  =>  %f%%\n", p2h_steps,
+         (float)p2h_steps / steps * 100);
+  printf("    Number of +1 2p2h-Contributions: %d\n", p2h_pos);
+  printf("    Number of -1 2p2h-Contributions: %d\n", p2h_neg);
+  printf("\n");
 }

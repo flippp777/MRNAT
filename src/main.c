@@ -67,9 +67,9 @@ main ()
   FILE *f1 = fopen ("bruteForceBitEval_smax8_kmax4.txt", "w");
   bruteForce_printToFile_2p2h (f1, smax, phi, phib, kmax, Mref);
   fclose (f1);
-  // FILE* f2 = fopen("symmBitEval_smax8_kmax4.txt", "w");
-  // symm_printToFile_2p2h(f2, states, statesb, smax, phi, phib, kmax, Mref);
-  // fclose(f2);
+  FILE* f2 = fopen("symmBitEval_smax8_kmax4.txt", "w");
+  symm_printToFile_2p2h(f2, smax, phi, phib, kmax, Mref);
+  fclose(f2);
   //
   // bruteForce_eval_2p2h (states, statesB, smax, phi, phib, kmax, Mref);
   // symm_eval_2p2h (states, statesB, smax, phi, phib, kmax, Mref);
