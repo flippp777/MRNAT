@@ -107,7 +107,7 @@ symm_printToFile_2p2h(FILE* fptr,
               sign = -1;
               p2h_neg++;
             }
-            printToFile(fptr,
+            printToFile_2p2h(fptr,
                         phib,
                         smax,
                         phi,
@@ -194,7 +194,7 @@ symm_printToFile_2p2h(FILE* fptr,
                   p1h_neg++;
                   sign = -1;
                 }
-                printToFile(fptr,
+                printToFile_2p2h(fptr,
                             phib,
                             smax,
                             phi,
@@ -243,7 +243,7 @@ symm_printToFile_2p2h(FILE* fptr,
               mpz_clrbit(phi_nub_exc, s);
               mpz_clrbit(phi_nub_exc, s);
 
-              printToFile(fptr,
+              printToFile_2p2h(fptr,
                           phib,
                           smax,
                           phi,
@@ -268,7 +268,7 @@ symm_printToFile_2p2h(FILE* fptr,
               mpz_clrbit(phi_nub_exc, s);
               mpz_clrbit(phi_nub_exc, b);
 
-              printToFile(fptr,
+              printToFile_2p2h(fptr,
                           phib,
                           smax,
                           phi,

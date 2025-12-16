@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 void
-printToFile(FILE* fptr,
+printToFile_2p2h(FILE* fptr,
             mpz_t phib[],
             int smax,
             int** phi,

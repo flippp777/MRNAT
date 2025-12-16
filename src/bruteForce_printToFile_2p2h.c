@@ -103,7 +103,7 @@ bruteForce_printToFile_2p2h(FILE* fptr,
                     sign = -1;
                   }
 
-                  printToFile(fptr,
+                  printToFile_2p2h(fptr,
                               phib,
                               smax,
                               phi,
@@ -168,7 +168,7 @@ bruteForce_printToFile_2p2h(FILE* fptr,
                     sign = -1;
                   }
 
-                  printToFile(fptr,
+                  printToFile_2p2h(fptr,
                               phib,
                               smax,
                               phi,
@@ -233,7 +233,7 @@ bruteForce_printToFile_2p2h(FILE* fptr,
                     sign = -1;
                   }
 
-                  printToFile(fptr,
+                  printToFile_2p2h(fptr,
                               phib,
                               smax,
                               phi,
