@@ -154,6 +154,7 @@ symm_printToFile_2p2h(FILE* fptr,
 
         for (s = 0; s < smax; s++) {
           p1h_steps += 2;
+          printf("s = %d\n", s);
           for (int hi = 0; hi < perm_count; hi++) {
             p1h_steps += 2;
 
@@ -164,20 +165,31 @@ symm_printToFile_2p2h(FILE* fptr,
               int perm = 0;
               int valid = 1;
               for (int i = 0; i < n; i++) {
-                if (mpz_tstbit(phi_nub, *h_perms[hi][i]) != 1) {
+                printb(phi_nub_exc, smax);
+                printf(" hole: %d", *h_perms[hi][i]);
+                if (mpz_tstbit(phi_nub_exc, *h_perms[hi][i]) != 1) {
+                  printf(" => invalid \n");
                   valid = 0;
                   break;
                 }
                 mpz_clrbit(phi_nub_exc, *h_perms[hi][i]);
                 perm += count_bits_right(phi_nub_exc, *h_perms[hi][i]);
+                printf(" => ");
+                printb(phi_nub_exc, smax);
 
+                printf(" particle: %d", *p_perms[pi][i]);
                 if (mpz_tstbit(phi_nub_exc, *p_perms[pi][i]) != 0) {
+                  printf(" => invalid \n");
                   valid = 0;
                   break;
                 }
                 mpz_setbit(phi_nub_exc, *p_perms[pi][i]);
                 perm += count_bits_right(phi_nub_exc, *p_perms[pi][i]);
+                printf(" => ");
+                printb(phi_nub_exc, smax);
+                printf("\n");
               }
+                printf("\n");
               if (valid) {
                 p1h_contr++;
                 int sign;

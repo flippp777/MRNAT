@@ -28,12 +28,12 @@ main ()
 
   int smax = 8; // Number of SP states
   int kmax = 4; // Number of Particles
-  int Mref = 4; // Size of Mref
+  int Mref = 2; // Size of Mref
   //
   int phi0[] = { 0, 1, 2, 3 };
   int phi2[] = { 0, 1, 2, 4 };
-  int phi4[] = { 0, 1, 4, 5 };
-  int phi6[] = { 0, 4, 5, 6 };
+  // int phi4[] = { 0, 1, 4, 5 };
+  // int phi6[] = { 0, 4, 5, 6 };
   int **phi = malloc (Mref * sizeof (int *));
   for (int i = 0; i < Mref; i++)
     {
@@ -41,16 +41,16 @@ main ()
     }
   memcpy (phi[0], phi0, kmax * sizeof (int));
   memcpy (phi[1], phi2, kmax * sizeof (int));
-  memcpy (phi[2], phi4, kmax * sizeof (int));
-  memcpy (phi[3], phi6, kmax * sizeof (int));
+  // memcpy (phi[2], phi4, kmax * sizeof (int));
+  // memcpy (phi[3], phi6, kmax * sizeof (int));
 
   mpz_t phi0b, phi2b, phi4b, phi6b;
   mpz_inits (phi0b, phi2b, phi4b, phi6b, NULL);
 
   toB (phi0b, phi0, kmax);
   toB (phi2b, phi2, kmax);
-  toB (phi4b, phi4, kmax);
-  toB (phi6b, phi6, kmax);
+  // toB (phi4b, phi4, kmax);
+  // toB (phi6b, phi6, kmax);
 
   mpz_t phib[4];
   for (int i = 0; i < 4; i++)
@@ -60,8 +60,8 @@ main ()
 
   mpz_set (phib[0], phi0b);
   mpz_set (phib[1], phi2b);
-  mpz_set (phib[2], phi4b);
-  mpz_set (phib[3], phi6b);
+  // mpz_set (phib[2], phi4b);
+  // mpz_set (phib[3], phi6b);
 
 
   FILE *f1 = fopen ("bruteForceBitEval_smax8_kmax4.txt", "w");
