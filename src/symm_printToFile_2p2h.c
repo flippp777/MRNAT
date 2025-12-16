@@ -85,9 +85,10 @@ symm_printToFile_2p2h(FILE* fptr,
         // phi_nu with its 2p-2h "excitations"
         for (int hi = 0; hi < perm_count; hi++) {
           p2h_steps++;
-          mpz_set(phi_nub_exc, phi_nub);
           for (int pi = 0; pi < perm_count; pi++) {
             p2h_steps++;
+
+            mpz_set(phi_nub_exc, phi_nub);
             int perm = 0;
             for (int i = 0; i < n; i++) {
               p2h_steps++;
@@ -155,11 +156,11 @@ symm_printToFile_2p2h(FILE* fptr,
           p1h_steps += 2;
           for (int hi = 0; hi < perm_count; hi++) {
             p1h_steps += 2;
-            mpz_set(phi_nub_exc, phi_nub);
 
             for (int pi = 0; pi < perm_count; pi++) {
               p1h_steps += 2;
 
+              mpz_set(phi_nub_exc, phi_nub);
               int perm = 0;
               int valid = 1;
               for (int i = 0; i < n; i++) {
@@ -199,6 +200,7 @@ symm_printToFile_2p2h(FILE* fptr,
                             *h_perms[hi][1],
                             *p_perms[pi][1],
                             phi_nub_exc,
+                            perm,
                             sign);
               }
             }
@@ -247,6 +249,7 @@ symm_printToFile_2p2h(FILE* fptr,
                           s,
                           s,
                           phi_nub_exc,
+                          0,
                           1);
             }
             // s=p-state
@@ -271,6 +274,7 @@ symm_printToFile_2p2h(FILE* fptr,
                           s,
                           b,
                           phi_nub_exc,
+                          0,
                           1);
             }
           }
