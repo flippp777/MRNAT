@@ -60,7 +60,7 @@ symm_printToFile_2p2h(FILE* fptr,
 
       mpz_xor(phi_ph, phib[mu], phib[nu]);
       int ph_num = mpz_popcount(phi_ph); // Number #p#h excitations between SD's
-      int n = ph_num / 2;
+      int n = 2;
       mpz_set(phi_nub, phib[nu]);
 
       // 2p2h difference
@@ -142,13 +142,12 @@ symm_printToFile_2p2h(FILE* fptr,
         int* particles[2] = { &s, &p_state };
         int* holes[2] = { &s, &h_state };
 
-        int perm_size = 2;
         int perm_count = 2; // 2!
 
-        int*** h_perms = permute_ptr(holes, 0, perm_size, perm_count);
+        int*** h_perms = permute_ptr(holes, 0, n, perm_count);
         p1h_steps += 2;
 
-        int*** p_perms = permute_ptr(particles, 0, perm_size, perm_count);
+        int*** p_perms = permute_ptr(particles, 0, n, perm_count);
         p1h_steps += 2;
 
         for (s = 0; s < smax; s++) {
@@ -162,17 +161,17 @@ symm_printToFile_2p2h(FILE* fptr,
 
               int perm = 0;
               int valid = 1;
-              for (int i = 0; i < perm_size; i++) {
+              for (int i = 0; i < n; i++) {
                 if (mpz_tstbit(phi_nub, *h_perms[hi][i]) != 1) {
                   valid = 0;
-                  continue;
+                  break;
                 }
                 mpz_clrbit(phi_nub_exc, *h_perms[hi][i]);
                 perm += count_bits_right(phi_nub_exc, *h_perms[hi][i]);
 
                 if (mpz_tstbit(phi_nub_exc, *p_perms[pi][i]) != 0) {
                   valid = 0;
-                  continue;
+                  break;
                 }
                 mpz_setbit(phi_nub_exc, *p_perms[pi][i]);
                 perm += count_bits_right(phi_nub_exc, *p_perms[pi][i]);
