@@ -4,7 +4,6 @@ void
 permute_rek(int** perms, int* arr, int start, int n, int perm_count, int* count)
 {
   if (start == n) {
-    // Permutation speichern
     for (int i = 0; i < n; i++)
       perms[*count][i] = arr[i];
     (*count)++;
@@ -34,7 +33,6 @@ permute(int* arr, int start, int n, int perm_count)
   int count = 0;
 
   if (start == n) {
-    // Permutation speichern
     for (int i = 0; i < n; i++)
       perms[count][i] = arr[i];
     count++;
@@ -60,7 +58,6 @@ void
 permute_ptr_rek(int*** perms, int** arr, int start, int n, int perm_count, int* count)
 {
   if (start == n) {
-    // Permutation speichern
     for (int i = 0; i < n; i++)
       perms[*count][i] = arr[i];
     (*count)++;
@@ -90,7 +87,6 @@ permute_ptr(int** arr, int start, int n, int perm_count)
   int count = 0;
 
   if (start == n) {
-    // Permutation speichern
     for (int i = 0; i < n; i++)
       perms[count][i] = arr[i];
     count++;
