@@ -11,8 +11,6 @@ void symm_eval_2p2h(int states[], unsigned long long statesb[], int smax,
                int **phi, int phib[], int kmax, int Mref) {
   int mu; // Index for SD mu
   int nu; // Index for SD nu
-  int a;  // Index for particle a
-  int r;  // Index for paritcle r
   int b;  // Index for hole b
   int s;  // Index for hole s
 

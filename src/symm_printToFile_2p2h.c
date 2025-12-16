@@ -69,7 +69,7 @@ symm_printToFile_2p2h(FILE* fptr,
 
         int particles[2];
         int holes[2];
-        get_npnh(particles, holes, 4, smax, phi_ph, phi_nub);
+        get_npnh(particles, holes, 4, phi_ph, phi_nub);
         p2h_steps += 4;
 
         // All permutations of particles and holes
@@ -135,7 +135,7 @@ symm_printToFile_2p2h(FILE* fptr,
 
         int p_state;
         int h_state;
-        get_npnh(&p_state, &h_state, ph_num, smax, phi_ph, phi_nub);
+        get_npnh(&p_state, &h_state, ph_num, phi_ph, phi_nub);
         p1h_steps += 2;
 
         int s;

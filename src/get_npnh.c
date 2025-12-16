@@ -4,7 +4,6 @@ void
 get_npnh(int particles[],
          int holes[],
          int two_n,
-         int smax,
          mpz_t phi_ph,
          mpz_t phi_nub)
 {
