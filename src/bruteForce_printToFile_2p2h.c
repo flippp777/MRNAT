@@ -115,6 +115,7 @@ bruteForce_printToFile_2p2h(FILE* fptr,
                               s,
                               r,
                               tmp_r,
+                              perm,
                               sign);
                 } // if 
               } // r

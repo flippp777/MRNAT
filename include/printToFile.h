@@ -16,6 +16,7 @@ printToFile(FILE* fptr,
             int s,
             int r,
             mpz_t phi_nub_exc,
+            int perm,
             int sign);
 
 #endif // !PRINTTOFILE

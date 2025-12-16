@@ -17,6 +17,7 @@ printToFile(FILE* fptr,
             int s,
             int r,
             mpz_t phi_nub_exc,
+            int perm,
             int sign)
 {
   // phi_nu with its 2p-2h "excitations"
@@ -88,6 +89,7 @@ printToFile(FILE* fptr,
 
   // Permutations for destroying and inserting + sorting
 
+  fprintf(fptr, "Permutations: %d", perm);
   fprintf(fptr, "\n");
   fprintf(fptr, "<phi_mu|phi_nu^{ar}_{bs}> = %d", sign);
   fprintf(fptr, "\n");

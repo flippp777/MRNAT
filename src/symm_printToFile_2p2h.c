@@ -118,6 +118,7 @@ symm_printToFile_2p2h(FILE* fptr,
                         h_perms[hi][1],
                         p_perms[pi][1],
                         phi_nub_exc,
+                        perm,
                         sign);
           }
         }
@@ -284,7 +285,7 @@ symm_printToFile_2p2h(FILE* fptr,
   int contributions = p2h_contr + p1h_contr + p0h_contr;
   int steps = p2h_steps + p1h_steps + p0h_steps;
 
-  printf("### Brute Force Evaluation 2p2h ###\n");
+  printf("### Symmetry Force Evaluation 2p2h ###\n");
   printf("\n");
 
   printf("Number of Cases:          %d  =>  100%%\n", cases);
