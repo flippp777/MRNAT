@@ -163,8 +163,8 @@ symm_printToFile_2p2h(FILE* fptr,
             for (int pi = 0; pi < perm_count; pi++) {
               p1h_steps += 2;
 
-            if ((*p_perms[pi][0] == *p_perms[pi][1]) && pi > 0)
-              continue;
+              if ((*p_perms[pi][0] == *p_perms[pi][1]) && pi > 0)
+                continue;
 
               mpz_set(phi_nub_exc, phi_nub);
               int perm = 0;
