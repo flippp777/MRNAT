@@ -11,4 +11,12 @@ symm_printToFile_2p2h(FILE* fptr,
                        int kmax,
                        int Mref);
 
+void
+symm_printToFile_3p3h(FILE* fptr,
+                      int smax,
+                      int** phi,
+                      mpz_t phib[],
+                      int kmax,
+                      int Mref);
+
 #endif // !SYMM_PRINTTOFILE
