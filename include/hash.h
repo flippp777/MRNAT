@@ -6,4 +6,7 @@
 uint64_t
 hash_func(const int* a, size_t block, size_t n);
 
+uint64_t
+hash_func_ptr(int** a, size_t block, size_t n);
+
 #endif // !HASH

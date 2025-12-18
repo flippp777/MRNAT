@@ -7,11 +7,15 @@ int
 main()
 {
   size_t n = 4;
-  int arr[] = { 1, 2, 3, 3 };
+  int a = 1;
+  int b = 2;
+  int c = 3;
+  int d = 4;
+  int* arr[] = { &a, &b, &c, &d };
 
   size_t count;
-  int* out;
-  quickperm(arr, n, &out, &count);
+  int** out;
+  quickperm_ptr(arr, n, &out, &count);
   printf("count: %zu\n", count);
   printf("\n");
 
@@ -23,11 +27,11 @@ main()
   for (int i = 0; i < 24; i++) {
     printf("Permutation: ");
     for (int j = 0; j < 4; j++) {
-      printf("%d", out[i * 4 + j]);
+      printf("%d", *out[i * 4 + j]);
     }
     printf("\n");
 
-    uint64_t hash = hash_func(out, i, n);
+    uint64_t hash = hash_func_ptr(out, i, n);
     printf("hash: %lu\n", hash);
 
     int already = 0;

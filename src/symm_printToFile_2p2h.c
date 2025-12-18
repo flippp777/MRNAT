@@ -1,6 +1,8 @@
 #include "../include/count_bits_right.h"
 #include "../include/get_npnh.h"
 #include "../include/permute.h"
+#include "../include/quickperm.h"
+#include "../include/hash.h"
 #include "../include/printToFile.h"
 #include "../include/printb.h"
 #include "../include/symm_printToFile.h"
