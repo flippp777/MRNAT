@@ -162,53 +162,30 @@ symm_printToFile_2p2h(FILE* fptr,
         for (s = 0; s < smax; s++) {
           p1h_steps += 2;
 
-          size_t tab_size = n;
-
-          int h_used[tab_size];
-          memset(h_used, 0, tab_size * sizeof(int));
-          uint64_t h_hashes[tab_size];
+          size_t set_size = n;
+          uint64_t h_keys[set_size];
+          uint8_t h_used[set_size];
+          HashSet H;
+          hashset_init(&H, h_keys, h_used, set_size);
 
           for (int hi = 0; hi < perm_count; hi++) {
             p1h_steps += 2;
 
             uint64_t h_hash = hash_func_ptr(h_perms, hi, n);
-            int seen = 0;
-            int h_idx = h_hash & (tab_size - 1);
-
-            while (h_used[h_idx]) {
-              if (h_hashes[h_idx] == h_hash) {
-                seen = 1;
-                break;
-              }
-              h_idx = (h_idx + 1) & (tab_size - 1);
-            }
-            if (seen)
+            if (hashset_check(&H, h_hash))
               continue;
-            h_used[h_idx] = 1;
-            h_hashes[h_idx] = h_hash;
 
-            int p_used[tab_size];
-            memset(p_used, 0, tab_size * sizeof(int));
-            uint64_t p_hashes[tab_size];
+            uint64_t p_keys[set_size];
+            uint8_t p_used[set_size];
+            HashSet P;
+            hashset_init(&P, p_keys, p_used, set_size);
 
             for (int pi = 0; pi < perm_count; pi++) {
               p1h_steps += 2;
 
               uint64_t p_hash = hash_func_ptr(p_perms, pi, n);
-              int seen = 0;
-              int p_idx = p_hash & (tab_size - 1);
-
-              while (p_used[p_idx]) {
-                if (p_hashes[p_idx] == p_hash) {
-                  seen = 1;
-                  break;
-                }
-                p_idx = (p_idx + 1) & (tab_size - 1);
-              }
-              if (seen)
+              if (hashset_check(&P, p_hash))
                 continue;
-              p_used[p_idx] = 1;
-              p_hashes[p_idx] = p_hash;
 
               mpz_set(phi_nub_exc, phi_nub);
               int perm = 0;
