@@ -37,17 +37,17 @@ bruteForce_eval_4p4h(int smax, mpz_t phib[], int kmax, int Mref)
   int p4h_contr = 0;
   int p4h_pos = 0;
   int p4h_neg = 0;
-  int p4h_steps = 0;
+  unsigned long p4h_steps = 0;
   int p3h = 0; // Number of 3p3h case
   int p3h_contr = 0;
   int p3h_pos = 0;
   int p3h_neg = 0;
-  int p3h_steps = 0;
+  unsigned long p3h_steps = 0;
   int p2h = 0; // Number of 2p2h case
   int p2h_contr = 0;
   int p2h_pos = 0;
   int p2h_neg = 0;
-  int p2h_steps = 0;
+  unsigned long p2h_steps = 0;
   int p1h = 0; // Number of 1p1h case
   int p1h_contr = 0;
   int p1h_pos = 0;
@@ -57,7 +57,7 @@ bruteForce_eval_4p4h(int smax, mpz_t phib[], int kmax, int Mref)
   int p0h_contr = 0;
   int p0h_pos = 0;
   int p0h_neg = 0;
-  int p0h_steps = 0;
+  unsigned long p0h_steps = 0;
 
   for (mu = 0; mu < Mref; mu++) {
 
@@ -493,14 +493,14 @@ bruteForce_eval_4p4h(int smax, mpz_t phib[], int kmax, int Mref)
 
   int cases = p4h + p3h + p2h + p1h + p0h;
   int contributions = p4h_contr + p3h_contr + p2h_contr + p1h_contr + p0h_contr;
-  int steps = p3h_steps + p3h_steps + p2h_steps + p1h_steps + p0h_steps;
+  unsigned long steps = p3h_steps + p3h_steps + p2h_steps + p1h_steps + p0h_steps;
 
   printf("### Brute Force Evaluation 4p4h ###\n");
   printf("\n");
 
   printf("Number of Cases:          %d  =>  100%%\n", cases);
   printf("Number of Contributions:  %d  =>  100%%\n", contributions);
-  printf("Number of Steps:          %d  =>  100%%\n", steps);
+  printf("Number of Steps:          %lu  =>  100%%\n", steps);
   printf("\n");
 
   printf("  Number of 0p0h-Cases:         %d  =>  %f%%\n",
@@ -509,7 +509,7 @@ bruteForce_eval_4p4h(int smax, mpz_t phib[], int kmax, int Mref)
   printf("  Number of 0p0h-Contributions: %d  =>  %f%%\n",
          p0h_contr,
          (float)p0h_contr / contributions * 100);
-  printf("  Number of 0p0h-Steps:         %d  =>  %f%%\n",
+  printf("  Number of 0p0h-Steps:         %lu  =>  %f%%\n",
          p0h_steps,
          (float)p0h_steps / steps * 100);
   printf("    Number of +1 0p0h-Contributions: %d\n", p0h_pos);
@@ -535,7 +535,7 @@ bruteForce_eval_4p4h(int smax, mpz_t phib[], int kmax, int Mref)
   printf("  Number of 2p2h-Contributions: %d  =>  %f%%\n",
          p2h_contr,
          (float)p2h_contr / contributions * 100);
-  printf("  Number of 2p2h-Steps:         %d  =>  %f%%\n",
+  printf("  Number of 2p2h-Steps:         %lu  =>  %f%%\n",
          p2h_steps,
          (float)p2h_steps / steps * 100);
   printf("    Number of +1 2p2h-Contributions: %d\n", p2h_pos);
@@ -548,7 +548,7 @@ bruteForce_eval_4p4h(int smax, mpz_t phib[], int kmax, int Mref)
   printf("  Number of 3p3h-Contributions: %d  =>  %f%%\n",
          p3h_contr,
          (float)p3h_contr / contributions * 100);
-  printf("  Number of 3p3h-Steps:         %d  =>  %f%%\n",
+  printf("  Number of 3p3h-Steps:         %lu  =>  %f%%\n",
          p3h_steps,
          (float)p3h_steps / steps * 100);
   printf("    Number of +1 3p3h-Contributions: %d\n", p3h_pos);
@@ -561,7 +561,7 @@ bruteForce_eval_4p4h(int smax, mpz_t phib[], int kmax, int Mref)
   printf("  Number of 4p4h-Contributions: %d  =>  %f%%\n",
          p4h_contr,
          (float)p4h_contr / contributions * 100);
-  printf("  Number of 4p4h-Steps:         %d  =>  %f%%\n",
+  printf("  Number of 4p4h-Steps:         %lu  =>  %f%%\n",
          p4h_steps,
          (float)p4h_steps / steps * 100);
   printf("    Number of +1 4p4h-Contributions: %d\n", p4h_pos);
