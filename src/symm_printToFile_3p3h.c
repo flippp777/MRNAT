@@ -161,7 +161,7 @@ symm_printToFile_3p3h(FILE* fptr,
         p2h_steps += 6;
 
         for (s1 = 0; s1 < smax; s1++) {
-          p1h_steps += 2;
+          p2h_steps += 2;
 
           size_t set_size = 8;
           uint64_t h_keys[set_size];
