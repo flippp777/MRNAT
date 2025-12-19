@@ -26,8 +26,8 @@ main()
 {
 
   mp_bitcnt_t smax = 8; // Number of SP states
-  size_t kmax = 4; // Number of Particles
-  size_t Mref = 5; // Size of Mref
+  size_t kmax = 4;      // Number of Particles
+  size_t Mref = 5;      // Size of Mref
   //
   int phi0[] = { 0, 1, 2, 3 };
   int phi1[] = { 0, 1, 2, 4 };
@@ -82,7 +82,7 @@ main()
   // fclose(f4);
   //
   bruteForce_eval_4p4h(smax, phib, kmax, Mref);
-  // symm_eval_3p3h(states, statesb, smax, phi, phib, kmax, Mref);
+  symm_eval_4p4h(smax, phi, phib, kmax, Mref);
 
   free(phi);
 }

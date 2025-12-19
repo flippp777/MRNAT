@@ -251,14 +251,14 @@ bruteForce_eval_4p4h(int smax, mpz_t phib[], int kmax, int Mref)
             mpz_combit(tmp_p1, p1);
 
             for (h2 = 0; h2 < smax; h2++) {
-              p3h_steps++;
+              p1h_steps++;
               mpz_set(tmp_h2, tmp_p1);
               if (mpz_tstbit(tmp_h2, h2) == 0)
                 continue;
               mpz_combit(tmp_h2, h2);
 
               for (p2 = 0; p2 < smax; p2++) {
-                p3h_steps++;
+                p1h_steps++;
                 mpz_set(tmp_p2, tmp_h2);
                 if (mpz_tstbit(tmp_p2, p2) == 1)
                   continue;
@@ -335,14 +335,14 @@ bruteForce_eval_4p4h(int smax, mpz_t phib[], int kmax, int Mref)
             mpz_combit(tmp_p1, p1);
 
             for (h2 = 0; h2 < smax; h2++) {
-              p3h_steps++;
+              p1h_steps++;
               mpz_set(tmp_h2, tmp_p1);
               if (mpz_tstbit(tmp_h2, h2) == 0)
                 continue;
               mpz_combit(tmp_h2, h2);
 
               for (p2 = 0; p2 < smax; p2++) {
-                p3h_steps++;
+                p1h_steps++;
                 mpz_set(tmp_p2, tmp_h2);
                 if (mpz_tstbit(tmp_p2, p2) == 1)
                   continue;
@@ -355,37 +355,45 @@ bruteForce_eval_4p4h(int smax, mpz_t phib[], int kmax, int Mref)
                     continue;
                   mpz_combit(tmp_h3, h3);
 
-                  for (h4 = 0; h4 < smax; h4++) {
+                  for (p3 = 0; p3 < smax; p3++) {
                     p1h_steps++;
-                    mpz_set(tmp_h4, tmp_p3);
-                    if (mpz_tstbit(tmp_h4, h4) == 0)
+                    mpz_set(tmp_p3, tmp_h3);
+                    if (mpz_tstbit(tmp_p3, p3) == 1)
                       continue;
-                    mpz_combit(tmp_h4, h4);
+                    mpz_combit(tmp_p3, p3);
 
-                    for (p4 = 0; p4 < smax; p4++) {
+                    for (h4 = 0; h4 < smax; h4++) {
                       p1h_steps++;
-                      mpz_set(tmp_p4, tmp_h4);
-                      if (mpz_tstbit(tmp_p4, p4) == 1)
+                      mpz_set(tmp_h4, tmp_p3);
+                      if (mpz_tstbit(tmp_h4, h4) == 0)
                         continue;
-                      mpz_combit(tmp_p4, p4);
+                      mpz_combit(tmp_h4, h4);
 
-                      if (mpz_cmp(tmp_p4, phib[mu]) == 0) {
-                        p1h_contr++;
+                      for (p4 = 0; p4 < smax; p4++) {
+                        p1h_steps++;
+                        mpz_set(tmp_p4, tmp_h4);
+                        if (mpz_tstbit(tmp_p4, p4) == 1)
+                          continue;
+                        mpz_combit(tmp_p4, p4);
 
-                        int perm = count_bits_right(tmp_h1, h1) +
-                                   count_bits_right(tmp_p1, p1) +
-                                   count_bits_right(tmp_h2, h2) +
-                                   count_bits_right(tmp_p2, p2) +
-                                   count_bits_right(tmp_h3, h3) +
-                                   count_bits_right(tmp_p3, p3) +
-                                   count_bits_right(tmp_h4, h4) +
-                                   count_bits_right(tmp_p4, p4);
-                        if (perm % 2 == 0) {
-                          p1h_pos++;
-                        } else {
-                          p1h_neg++;
-                        }
-                      } // if
+                        if (mpz_cmp(tmp_p4, phib[mu]) == 0) {
+                          p1h_contr++;
+
+                          int perm = count_bits_right(tmp_h1, h1) +
+                                     count_bits_right(tmp_p1, p1) +
+                                     count_bits_right(tmp_h2, h2) +
+                                     count_bits_right(tmp_p2, p2) +
+                                     count_bits_right(tmp_h3, h3) +
+                                     count_bits_right(tmp_p3, p3) +
+                                     count_bits_right(tmp_h4, h4) +
+                                     count_bits_right(tmp_p4, p4);
+                          if (perm % 2 == 0) {
+                            p1h_pos++;
+                          } else {
+                            p1h_neg++;
+                          }
+                        } // if
+                      }
                     }
                   } // r
                 } // s
@@ -411,14 +419,14 @@ bruteForce_eval_4p4h(int smax, mpz_t phib[], int kmax, int Mref)
             mpz_combit(tmp_p1, p1);
 
             for (h2 = 0; h2 < smax; h2++) {
-              p3h_steps++;
+              p0h_steps++;
               mpz_set(tmp_h2, tmp_p1);
               if (mpz_tstbit(tmp_h2, h2) == 0)
                 continue;
               mpz_combit(tmp_h2, h2);
 
               for (p2 = 0; p2 < smax; p2++) {
-                p3h_steps++;
+                p0h_steps++;
                 mpz_set(tmp_p2, tmp_h2);
                 if (mpz_tstbit(tmp_p2, p2) == 1)
                   continue;
@@ -480,11 +488,12 @@ bruteForce_eval_4p4h(int smax, mpz_t phib[], int kmax, int Mref)
       }
     }
   }
-  mpz_clears(tmp_h1, tmp_p1, tmp_h2, tmp_p2, tmp_h3, tmp_p3, tmp_h4, tmp_p4, NULL);
+  mpz_clears(
+    tmp_h1, tmp_p1, tmp_h2, tmp_p2, tmp_h3, tmp_p3, tmp_h4, tmp_p4, NULL);
 
   int cases = p4h + p3h + p2h + p1h + p0h;
-  int contributions = p4h_contr +p3h_contr + p2h_contr + p1h_contr + p0h_contr;
-  int steps = p3h_steps +p3h_steps + p2h_steps + p1h_steps + p0h_steps;
+  int contributions = p4h_contr + p3h_contr + p2h_contr + p1h_contr + p0h_contr;
+  int steps = p3h_steps + p3h_steps + p2h_steps + p1h_steps + p0h_steps;
 
   printf("### Brute Force Evaluation 4p4h ###\n");
   printf("\n");
