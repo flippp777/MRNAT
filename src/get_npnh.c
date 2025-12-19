@@ -1,15 +1,15 @@
 #include "../include/get_npnh.h"
 #include <gmp.h>
 void
-get_npnh(int particles[],
-         int holes[],
-         int two_n,
+get_npnh(mp_bitcnt_t particles[],
+         mp_bitcnt_t holes[],
+         size_t two_n,
          mpz_t phi_ph,
          mpz_t phi_nub)
 {
-  int state_idx = 0;
-  int hole_idx = 0;
-  int particle_idx = 0;
+  mp_bitcnt_t state_idx = 0;
+  size_t hole_idx = 0;
+  size_t particle_idx = 0;
 
   for (int i = 0; i < two_n; i++) {
     state_idx = mpz_scan1(phi_ph, state_idx);

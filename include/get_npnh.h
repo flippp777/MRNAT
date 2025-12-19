@@ -3,9 +3,9 @@
 #include <gmp.h>
 
 void
-get_npnh(int particles[],
-         int holes[],
-         int two_n,
+get_npnh(mp_bitcnt_t particles[],
+         mp_bitcnt_t holes[],
+         size_t two_n,
          mpz_t phi_ph,
          mpz_t phi_nub);
 

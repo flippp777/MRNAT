@@ -1,4 +1,5 @@
 #include "../include/hash.h"
+#include <gmp.h>
 #include <stddef.h>
 #include <stdint.h>
 #include <string.h>
@@ -13,7 +14,7 @@ splitmix64(uint64_t x)
 }
 
 uint64_t
-hash_func(const int* a, size_t block, size_t n)
+hash_func(const mp_bitcnt_t* a, size_t block, size_t n)
 {
   uint64_t h = 0x6a09e667f3bcc909ULL ^ (uint64_t)n; // Seed + Länge
   for (size_t i = 0; i < n; i++) {
@@ -27,7 +28,7 @@ hash_func(const int* a, size_t block, size_t n)
 }
 
 uint64_t
-hash_func_ptr(int** a, size_t block, size_t n)
+hash_func_ptr(mp_bitcnt_t** a, size_t block, size_t n)
 {
   uint64_t h = 0x6a09e667f3bcc909ULL ^ (uint64_t)n; // Seed + Länge
   for (size_t i = 0; i < n; i++) {

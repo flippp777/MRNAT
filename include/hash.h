@@ -1,13 +1,14 @@
 #ifndef HASH
 #define HASH
+#include <gmp.h>
 #include <stddef.h>
 #include <stdint.h>
 
 uint64_t
-hash_func(const int* a, size_t block, size_t n);
+hash_func(const mp_bitcnt_t* a, size_t block, size_t n);
 
 uint64_t
-hash_func_ptr(int** a, size_t block, size_t n);
+hash_func_ptr(mp_bitcnt_t** a, size_t block, size_t n);
 
 typedef struct
 {

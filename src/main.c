@@ -25,16 +25,16 @@ int
 main()
 {
 
-  int smax = 8; // Number of SP states
-  int kmax = 4; // Number of Particles
-  int Mref = 4; // Size of Mref
+  mp_bitcnt_t smax = 8; // Number of SP states
+  size_t kmax = 4; // Number of Particles
+  size_t Mref = 4; // Size of Mref
   //
   int phi0[] = { 0, 1, 2, 3 };
   int phi2[] = { 0, 1, 2, 4 };
   int phi4[] = { 0, 1, 4, 5 };
   int phi6[] = { 0, 4, 5, 6 };
   int** phi = malloc(Mref * sizeof(int*));
-  for (int i = 0; i < Mref; i++) {
+  for (size_t i = 0; i < Mref; i++) {
     phi[i] = malloc(kmax * sizeof(int));
   }
   memcpy(phi[0], phi0, kmax * sizeof(int));

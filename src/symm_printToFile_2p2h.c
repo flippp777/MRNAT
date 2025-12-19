@@ -15,20 +15,24 @@
 // Look for all 2p-2h excitations for <phi_mu|phi_nu^{ar}_{bs}
 void
 symm_printToFile_2p2h(FILE* fptr,
-                      int smax,
+                      mp_bitcnt_t smax,
                       int** phi,
                       mpz_t phib[],
-                      int kmax,
-                      int Mref)
+                      size_t kmax,
+                      size_t Mref)
 {
-  int mu; // Index for SD mu
-  int nu; // Index for SD nu
-  int s;  // Index for hole s
+  size_t mu; // Index for SD mu
+  size_t nu; // Index for SD nu
+  mp_bitcnt_t s;  // Index for summed hole
 
   mpz_t phi_ph;
   mpz_t phi_nub;
   mpz_t phi_nub_exc;
   mpz_inits(phi_ph, phi_nub, phi_nub_exc, NULL);
+
+  size_t n = 2; // # particles / holes
+  // All permutations of particles and holes
+  size_t perm_count = 2; // 2!
 
   // Values for comparisons
   int p2h = 0; // Number of 2p2h case
@@ -63,44 +67,42 @@ symm_printToFile_2p2h(FILE* fptr,
       fprintf(fptr, "\n");
 
       mpz_xor(phi_ph, phib[mu], phib[nu]);
-      int ph_num = mpz_popcount(phi_ph); // Number #p#h excitations between SD's
-      int n = 2;
+      mp_bitcnt_t ph_num = mpz_popcount(phi_ph); // Number #p#h excitations between SD's
       mpz_set(phi_nub, phib[nu]);
 
       // 2p2h difference
       if (ph_num == 4) {
         p2h++;
 
-        int particles[2];
-        int holes[2];
+        mp_bitcnt_t particles[n];
+        mp_bitcnt_t holes[n];
         get_npnh(particles, holes, 4, phi_ph, phi_nub);
         p2h_steps += 4;
 
-        // All permutations of particles and holes
-        int perm_count = 2; // 2!
-
-        int** h_perms = permute(holes, 0, n, perm_count);
+        mp_bitcnt_t* h_perms;
+        quickperm(holes, n, &h_perms, &perm_count);
         p2h_steps += 2;
 
-        int** p_perms = permute(particles, 0, n, perm_count);
+        mp_bitcnt_t* p_perms;
+        quickperm(particles, n, &p_perms, &perm_count);
         p2h_steps += 2;
 
         // 4 contributions
         // phi_nu with its 2p-2h "excitations"
-        for (int hi = 0; hi < perm_count; hi++) {
+        for (size_t hi = 0; hi < perm_count; hi++) {
           p2h_steps++;
-          for (int pi = 0; pi < perm_count; pi++) {
+          for (size_t pi = 0; pi < perm_count; pi++) {
             p2h_steps++;
 
             mpz_set(phi_nub_exc, phi_nub);
             int perm = 0;
-            for (int i = 0; i < n; i++) {
+            for (size_t i = 0; i < n; i++) {
               p2h_steps++;
-              mpz_clrbit(phi_nub_exc, h_perms[hi][i]);
-              perm += count_bits_right(phi_nub_exc, h_perms[hi][i]);
+              mpz_clrbit(phi_nub_exc, h_perms[hi * n + i]);
+              perm += count_bits_right(phi_nub_exc, h_perms[hi * n + i]);
 
-              mpz_setbit(phi_nub_exc, p_perms[pi][i]);
-              perm += count_bits_right(phi_nub_exc, p_perms[pi][i]);
+              mpz_setbit(phi_nub_exc, p_perms[pi * n + i]);
+              perm += count_bits_right(phi_nub_exc, p_perms[pi * n + i]);
             }
             p2h_contr++;
             int sign;
@@ -118,18 +120,14 @@ symm_printToFile_2p2h(FILE* fptr,
                              kmax,
                              mu,
                              nu,
-                             h_perms[hi][0],
-                             p_perms[pi][0],
-                             h_perms[hi][1],
-                             p_perms[pi][1],
+                             h_perms[hi * n + 0],
+                             p_perms[pi * n + 0],
+                             h_perms[hi * n + 1],
+                             p_perms[pi * n + 1],
                              phi_nub_exc,
                              perm,
                              sign);
           }
-        }
-        for (int i = 0; i < perm_count; i++) {
-          free(h_perms[i]);
-          free(p_perms[i]);
         }
         free(h_perms);
         free(p_perms);
@@ -139,24 +137,20 @@ symm_printToFile_2p2h(FILE* fptr,
       if (ph_num == 2) {
         p1h++;
 
-        int p_state;
-        int h_state;
+        mp_bitcnt_t p_state;
+        mp_bitcnt_t h_state;
         get_npnh(&p_state, &h_state, ph_num, phi_ph, phi_nub);
         p1h_steps += 2;
 
-        int s;
-        int* particles[2] = { &s, &p_state };
-        int* holes[2] = { &s, &h_state };
+        mp_bitcnt_t* particles[2] = { &s, &p_state };
+        mp_bitcnt_t* holes[2] = { &s, &h_state };
 
-        int perm_count = 2; // 2!
-
-        int** h_perms;
-        size_t count;
-        quickperm_ptr(holes, n, &h_perms, &count);
+        mp_bitcnt_t** h_perms;
+        quickperm_ptr(holes, n, &h_perms, &perm_count);
         p1h_steps += 2;
 
-        int** p_perms;
-        quickperm_ptr(particles, n, &p_perms, &count);
+        mp_bitcnt_t** p_perms;
+        quickperm_ptr(particles, n, &p_perms, &perm_count);
         p1h_steps += 2;
 
         for (s = 0; s < smax; s++) {
@@ -168,7 +162,7 @@ symm_printToFile_2p2h(FILE* fptr,
           HashSet H;
           hashset_init(&H, h_keys, h_used, set_size);
 
-          for (int hi = 0; hi < perm_count; hi++) {
+          for (size_t hi = 0; hi < perm_count; hi++) {
             p1h_steps += 2;
 
             uint64_t h_hash = hash_func_ptr(h_perms, hi, n);
@@ -180,7 +174,7 @@ symm_printToFile_2p2h(FILE* fptr,
             HashSet P;
             hashset_init(&P, p_keys, p_used, set_size);
 
-            for (int pi = 0; pi < perm_count; pi++) {
+            for (size_t pi = 0; pi < perm_count; pi++) {
               p1h_steps += 2;
 
               uint64_t p_hash = hash_func_ptr(p_perms, pi, n);
@@ -190,7 +184,7 @@ symm_printToFile_2p2h(FILE* fptr,
               mpz_set(phi_nub_exc, phi_nub);
               int perm = 0;
               int valid = 1;
-              for (int i = 0; i < n; i++) {
+              for (size_t i = 0; i < n; i++) {
                 if (mpz_tstbit(phi_nub_exc, *h_perms[hi * n + i]) != 1) {
                   valid = 0;
                   break;
@@ -244,7 +238,7 @@ symm_printToFile_2p2h(FILE* fptr,
 
         // The signs are now all positive
         int b = 0;
-        for (int k = 0; k < kmax; k++) {
+        for (size_t k = 0; k < kmax; k++) {
           p0h_steps++;
           // b=h-state
           b = mpz_scan1(phi_nub, 0);
