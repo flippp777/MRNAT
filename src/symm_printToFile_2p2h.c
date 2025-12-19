@@ -154,7 +154,7 @@ symm_printToFile_2p2h(FILE* fptr,
         p1h_steps += 2;
 
         for (s = 0; s < smax; s++) {
-          p1h_steps += 2;
+          p1h_steps += 1;
 
           size_t set_size = n;
           uint64_t h_keys[set_size];
@@ -163,7 +163,7 @@ symm_printToFile_2p2h(FILE* fptr,
           hashset_init(&H, h_keys, h_used, set_size);
 
           for (size_t hi = 0; hi < perm_count; hi++) {
-            p1h_steps += 2;
+            p1h_steps += 1;
 
             uint64_t h_hash = hash_func_ptr(h_perms, hi, n);
             if (hashset_check(&H, h_hash))
@@ -175,7 +175,7 @@ symm_printToFile_2p2h(FILE* fptr,
             hashset_init(&P, p_keys, p_used, set_size);
 
             for (size_t pi = 0; pi < perm_count; pi++) {
-              p1h_steps += 2;
+              p1h_steps += 1;
 
               uint64_t p_hash = hash_func_ptr(p_perms, pi, n);
               if (hashset_check(&P, p_hash))
