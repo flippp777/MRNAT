@@ -60,22 +60,22 @@ main()
   mpz_set(phib[2], phi4b);
   mpz_set(phib[3], phi6b);
 
-  FILE *f1 = fopen ("bruteForceBitEval_smax8_kmax4.txt", "w");
-  bruteForce_printToFile_2p2h (f1, smax, phi, phib, kmax, Mref);
-  fclose (f1);
-  FILE* f2 = fopen("symmBitEval_smax8_kmax4.txt", "w");
-  symm_printToFile_2p2h(f2, smax, phi, phib, kmax, Mref);
-  fclose(f2);
+  // FILE *f1 = fopen ("bruteForceBitEval_smax8_kmax4.txt", "w");
+  // bruteForce_printToFile_2p2h (f1, smax, phi, phib, kmax, Mref);
+  // fclose (f1);
+  // FILE* f2 = fopen("symmBitEval_smax8_kmax4.txt", "w");
+  // symm_printToFile_2p2h(f2, smax, phi, phib, kmax, Mref);
+  // fclose(f2);
   //
   // bruteForce_eval_2p2h (states, statesB, smax, phi, phib, kmax, Mref);
   // symm_eval_2p2h (states, statesB, smax, phi, phib, kmax, Mref);
 
-  // FILE* f3 = fopen("bruteForceBitEval_smax8_kmax4_3p3h.txt", "w");
-  // bruteForce_printToFile_3p3h(f3, smax, phi, phib, kmax, Mref);
-  // fclose(f3);
-  // FILE* f4 = fopen("symmBitEval_smax8_kmax4_3p3h.txt", "w");
-  // symm_printToFile_3p3h(f4, smax, phi, phib, kmax, Mref);
-  // fclose(f4);
+  FILE* f3 = fopen("bruteForceBitEval_smax8_kmax4_3p3h.txt", "w");
+  bruteForce_printToFile_3p3h(f3, smax, phi, phib, kmax, Mref);
+  fclose(f3);
+  FILE* f4 = fopen("symmBitEval_smax8_kmax4_3p3h.txt", "w");
+  symm_printToFile_3p3h(f4, smax, phi, phib, kmax, Mref);
+  fclose(f4);
   //
   // bruteForce_eval_3p3h(states, statesb, smax, phi, phib, kmax, Mref);
   // symm_eval_3p3h(states, statesb, smax, phi, phib, kmax, Mref);

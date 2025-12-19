@@ -13,10 +13,10 @@ symm_printToFile_2p2h(FILE* fptr,
 
 void
 symm_printToFile_3p3h(FILE* fptr,
-                      int smax,
+                      mp_bitcnt_t smax,
                       int** phi,
                       mpz_t phib[],
-                      int kmax,
-                      int Mref);
+                      size_t kmax,
+                      size_t Mref);
 
 #endif // !SYMM_PRINTTOFILE

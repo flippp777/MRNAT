@@ -1,4 +1,5 @@
 #include "../include/count_bits_right.h"
+#include "../include/quickperm.h"
 #include "../include/get_npnh.h"
 #include "../include/permute.h"
 #include "../include/printToFile.h"
@@ -11,20 +12,24 @@
 // Look for all 2p-2h excitations for <phi_mu|phi_nu^{ar}_{bs}
 void
 symm_printToFile_3p3h(FILE* fptr,
-                      int smax,
+                      mp_bitcnt_t smax,
                       int** phi,
                       mpz_t phib[],
-                      int kmax,
-                      int Mref)
+                      size_t kmax,
+                      size_t Mref)
 {
-  int mu; // Index for SD mu
-  int nu; // Index for SD nu
-  int s;  // Index for hole s
+  size_t mu; // Index for SD mu
+  size_t nu; // Index for SD nu
+  mp_bitcnt_t s1;  // Index for summation state
 
   mpz_t phi_ph;
   mpz_t phi_nub;
   mpz_t phi_nub_exc;
   mpz_inits(phi_ph, phi_nub, phi_nub_exc, NULL);
+
+  size_t n = 3; // # particles / holes
+  // All permutations of particles and holes
+  size_t perm_count = 6; // 3! permutations
 
   // Values for comparisons
   int p3h = 0; // Number of 3p3h case
@@ -48,7 +53,6 @@ symm_printToFile_3p3h(FILE* fptr,
   int p0h_neg = 0;
   int p0h_steps = 0;
 
-  int perm_count = 6; // 3! permutations
 
   for (mu = 0; mu < Mref; mu++) {
     // Print current SD mu
@@ -66,40 +70,41 @@ symm_printToFile_3p3h(FILE* fptr,
       fprintf(fptr, "\n");
 
       mpz_xor(phi_ph, phib[mu], phib[nu]);
-      int ph_num = mpz_popcount(phi_ph); // Number #p#h excitations between SD's
-      int n = 3;
+      mp_bitcnt_t ph_num = mpz_popcount(phi_ph); // Number #p#h excitations between SD's
       mpz_set(phi_nub, phib[nu]);
 
       // 3p3h difference
       if (ph_num == 6) {
         p3h++;
 
-        int particles[3];
-        int holes[3];
+        mp_bitcnt_t particles[3];
+        mp_bitcnt_t holes[3];
         get_npnh(particles, holes, ph_num, phi_ph, phi_nub);
         p3h_steps += 9;
 
-        int** h_perms = permute(holes, 0, n, perm_count);
-        p3h_steps += 3;
+        mp_bitcnt_t* h_perms;
+        quickperm(holes, n, &h_perms, &perm_count);
+        p3h_steps += 6;
 
-        int** p_perms = permute(particles, 0, n, perm_count);
-        p3h_steps += 3;
+        mp_bitcnt_t* p_perms;
+        quickperm(particles, n, &p_perms, &perm_count);
+        p3h_steps += 6;
 
         // phi_nu with its 3p-3h "excitations"
-        for (int hi = 0; hi < perm_count; hi++) {
+        for (size_t hi = 0; hi < perm_count; hi++) {
           p3h_steps++;
-          for (int pi = 0; pi < perm_count; pi++) {
+          for (size_t pi = 0; pi < perm_count; pi++) {
             p3h_steps++;
 
             mpz_set(phi_nub_exc, phi_nub);
             int perm = 0;
-            for (int i = 0; i < n; i++) {
+            for (size_t i = 0; i < n; i++) {
               p3h_steps++;
-              mpz_clrbit(phi_nub_exc, h_perms[hi][i]);
-              perm += count_bits_right(phi_nub_exc, h_perms[hi][i]);
+              mpz_clrbit(phi_nub_exc, h_perms[hi * n + i]);
+              perm += count_bits_right(phi_nub_exc, h_perms[hi * n + i]);
 
-              mpz_setbit(phi_nub_exc, p_perms[pi][i]);
-              perm += count_bits_right(phi_nub_exc, p_perms[pi][i]);
+              mpz_setbit(phi_nub_exc, p_perms[pi * n + i]);
+              perm += count_bits_right(phi_nub_exc, p_perms[pi * n + i]);
             }
             p3h_contr++;
             int sign;
@@ -117,20 +122,16 @@ symm_printToFile_3p3h(FILE* fptr,
                         kmax,
                         mu,
                         nu,
-                        h_perms[hi][0],
-                        p_perms[pi][0],
-                        h_perms[hi][1],
-                        p_perms[pi][1],
-                        h_perms[hi][2],
-                        p_perms[pi][2],
+                        h_perms[hi * n + 0],
+                        p_perms[pi * n + 0],
+                        h_perms[hi * n + 1],
+                        p_perms[pi * n + 1],
+                        h_perms[hi * n + 2],
+                        p_perms[pi * n + 2],
                         phi_nub_exc,
                         perm,
                         sign);
           }
-        }
-        for (int i = 0; i < perm_count; i++) {
-          free(h_perms[i]);
-          free(p_perms[i]);
         }
         free(h_perms);
         free(p_perms);
@@ -140,52 +141,54 @@ symm_printToFile_3p3h(FILE* fptr,
       if (ph_num == 2) {
         p1h++;
 
-        int p_state;
-        int h_state;
+        mp_bitcnt_t p_state;
+        mp_bitcnt_t h_state;
         get_npnh(&p_state, &h_state, ph_num, phi_ph, phi_nub);
         p1h_steps += 2;
 
-        int s;
-        int* particles[2] = { &s, &p_state };
-        int* holes[2] = { &s, &h_state };
+        int n = 2;
+        mp_bitcnt_t* particles[2] = { &s1, &p_state };
+        mp_bitcnt_t* holes[2] = { &s1, &h_state };
 
-        int*** h_perms = permute_ptr(holes, 0, n, perm_count);
-        p1h_steps += 2;
+        mp_bitcnt_t** h_perms;
+        quickperm_ptr(holes, n, &h_perms, &perm_count);
+        p1h_steps += 6;
 
-        int*** p_perms = permute_ptr(particles, 0, n, perm_count);
-        p1h_steps += 2;
+        mp_bitcnt_t** p_perms;
+        quickperm_ptr(particles, n, &p_perms, &perm_count);
+        p1h_steps += 6;
 
-        for (s = 0; s < smax; s++) {
+        for (s1 = 0; s1 < smax; s1++) {
           p1h_steps += 2;
-          for (int hi = 0; hi < perm_count; hi++) {
-            p1h_steps += 2;
+          for (size_t hi = 0; hi < perm_count; hi++) {
+            p1h_steps += 1;
 
-            if ((*h_perms[hi][0] == *h_perms[hi][1]) && hi > 0)
+            if ((*h_perms[hi * n + 0] == *h_perms[hi * n + 1]) && hi > 0)
               continue;
 
-            for (int pi = 0; pi < perm_count; pi++) {
-              p1h_steps += 2;
+            for (size_t pi = 0; pi < perm_count; pi++) {
+              p1h_steps += 1;
 
-              if ((*p_perms[pi][0] == *p_perms[pi][1]) && pi > 0)
+              if ((*p_perms[pi * n + 0] == *p_perms[pi * n + 1]) && pi > 0)
                 continue;
 
               mpz_set(phi_nub_exc, phi_nub);
               int perm = 0;
               int valid = 1;
-              for (int i = 0; i < n; i++) {
-                if (mpz_tstbit(phi_nub_exc, *h_perms[hi][i]) != 1) {
+              for (size_t i = 0; i < n; i++) {
+                if (mpz_tstbit(phi_nub_exc, *h_perms[hi * n + i]) != 1) {
                   valid = 0;
                   break;
                 }
-                mpz_clrbit(phi_nub_exc, *h_perms[hi][i]);
-                perm += count_bits_right(phi_nub_exc, *h_perms[hi][i]);
+                mpz_clrbit(phi_nub_exc, *h_perms[hi * n + i]);
+                perm += count_bits_right(phi_nub_exc, *h_perms[hi * n + i]);
 
-                if (mpz_tstbit(phi_nub_exc, *p_perms[pi][i]) != 0) {
+                if (mpz_tstbit(phi_nub_exc, *p_perms[pi * n + i]) != 0) {
                   valid = 0;
                   break;
                 }
-                mpz_setbit(phi_nub_exc, *p_perms[pi][i]);
-                perm += count_bits_right(phi_nub_exc, *p_perms[pi][i]);
+                mpz_setbit(phi_nub_exc, *p_perms[pi * n + i]);
+                perm += count_bits_right(phi_nub_exc, *p_perms[pi * n + i]);
               }
               if (valid) {
                 p1h_contr++;
@@ -204,21 +207,16 @@ symm_printToFile_3p3h(FILE* fptr,
                             kmax,
                             mu,
                             nu,
-                            *h_perms[hi][0],
-                            *p_perms[pi][0],
-                            *h_perms[hi][1],
-                            *p_perms[pi][1],
+                            *h_perms[hi * n + 0],
+                            *p_perms[pi * n + 0],
+                            *h_perms[hi * n + 1],
+                            *p_perms[pi * n + 1],
                             phi_nub_exc,
                             perm,
                             sign);
               }
             }
           }
-        }
-
-        for (int i = 0; i < perm_count; i++) {
-          free(h_perms[i]);
-          free(p_perms[i]);
         }
         free(h_perms);
         free(p_perms);
@@ -230,21 +228,21 @@ symm_printToFile_3p3h(FILE* fptr,
 
         // The signs are now all positive
         int b = 0;
-        for (int k = 0; k < kmax; k++) {
+        for (size_t k = 0; k < kmax; k++) {
           p0h_steps++;
           // b=h-state
           b = mpz_scan1(phi_nub, 0);
-          for (s = 0; s < smax; s++) {
+          for (s1 = 0; s1 < smax; s1++) {
             p0h_steps++;
             // s=h-state
             //  b=a & s=r
-            if (mpz_tstbit(phi_nub, s) == 1) {
+            if (mpz_tstbit(phi_nub, s1) == 1) {
               p0h_contr++;
               p0h_pos++;
               mpz_clrbit(phi_nub_exc, b);
               mpz_setbit(phi_nub_exc, b);
-              mpz_clrbit(phi_nub_exc, s);
-              mpz_clrbit(phi_nub_exc, s);
+              mpz_clrbit(phi_nub_exc, s1);
+              mpz_clrbit(phi_nub_exc, s1);
 
               printToFile_2p2h(fptr,
                           phib,
@@ -255,8 +253,8 @@ symm_printToFile_3p3h(FILE* fptr,
                           nu,
                           b,
                           b,
-                          s,
-                          s,
+                          s1,
+                          s1,
                           phi_nub_exc,
                           0,
                           1);
@@ -267,8 +265,8 @@ symm_printToFile_3p3h(FILE* fptr,
               p0h_contr++;
               p0h_pos++;
               mpz_clrbit(phi_nub_exc, b);
-              mpz_setbit(phi_nub_exc, s);
-              mpz_clrbit(phi_nub_exc, s);
+              mpz_setbit(phi_nub_exc, s1);
+              mpz_clrbit(phi_nub_exc, s1);
               mpz_clrbit(phi_nub_exc, b);
 
               printToFile_2p2h(fptr,
@@ -279,8 +277,8 @@ symm_printToFile_3p3h(FILE* fptr,
                           mu,
                           nu,
                           b,
-                          s,
-                          s,
+                          s1,
+                          s1,
                           b,
                           phi_nub_exc,
                           0,
