@@ -23,4 +23,7 @@ symm_eval_3p3h(int states[],
 void
 symm_eval_4p4h(mp_bitcnt_t smax, int** phi, mpz_t phib[], size_t kmax, size_t Mref);
 
+void
+symm_eval_5p5h(mp_bitcnt_t smax, int** phi, mpz_t phib[], size_t kmax, size_t Mref);
+
 #endif // !SYMM_EVAL

@@ -21,5 +21,7 @@ bruteForce_eval_3p3h(int states[],
                      int Mref);
 void
 bruteForce_eval_4p4h(int smax, mpz_t phib[], int kmax, int Mref);
+void
+bruteForce_eval_5p5h(int smax, mpz_t phib[], int kmax, int Mref);
 
 #endif // !BRUTEFORCE_EVAL

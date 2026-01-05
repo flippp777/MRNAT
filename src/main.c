@@ -25,15 +25,16 @@ int
 main()
 {
 
-  mp_bitcnt_t smax = 8; // Number of SP states
-  size_t kmax = 4;      // Number of Particles
-  size_t Mref = 5;      // Size of Mref
+  mp_bitcnt_t smax = 10; // Number of SP states
+  size_t kmax = 5;       // Number of Particles
+  size_t Mref = 6;       // Size of Mref
   //
-  int phi0[] = { 0, 1, 2, 3 };
-  int phi1[] = { 0, 1, 2, 4 };
-  int phi2[] = { 0, 1, 4, 5 };
-  int phi3[] = { 0, 4, 5, 6 };
-  int phi4[] = { 4, 5, 6, 7 };
+  int phi0[] = { 0, 1, 2, 3, 4 };
+  int phi1[] = { 0, 1, 2, 3, 5 };
+  int phi2[] = { 0, 1, 2, 5, 6 };
+  int phi3[] = { 0, 1, 5, 6, 7 };
+  int phi4[] = { 0, 5, 6, 7, 8 };
+  int phi5[] = { 5, 6, 7, 8, 9 };
   int** phi = malloc(Mref * sizeof(int*));
   for (size_t i = 0; i < Mref; i++) {
     phi[i] = malloc(kmax * sizeof(int));
@@ -43,15 +44,17 @@ main()
   memcpy(phi[2], phi2, kmax * sizeof(int));
   memcpy(phi[3], phi3, kmax * sizeof(int));
   memcpy(phi[4], phi4, kmax * sizeof(int));
+  memcpy(phi[5], phi5, kmax * sizeof(int));
 
-  mpz_t phi0b, phi1b, phi2b, phi3b, phi4b;
-  mpz_inits(phi0b, phi1b, phi2b, phi3b, phi4b, NULL);
+  mpz_t phi0b, phi1b, phi2b, phi3b, phi4b, phi5b;
+  mpz_inits(phi0b, phi1b, phi2b, phi3b, phi4b, phi5b, NULL);
 
   toB(phi0b, phi0, kmax);
   toB(phi1b, phi1, kmax);
   toB(phi2b, phi2, kmax);
   toB(phi3b, phi3, kmax);
   toB(phi4b, phi4, kmax);
+  toB(phi5b, phi5, kmax);
 
   mpz_t phib[Mref];
   for (size_t i = 0; i < Mref; i++) {
@@ -63,6 +66,7 @@ main()
   mpz_set(phib[2], phi2b);
   mpz_set(phib[3], phi3b);
   mpz_set(phib[4], phi4b);
+  mpz_set(phib[5], phi5b);
 
   // FILE *f1 = fopen ("bruteForceBitEval_smax8_kmax4.txt", "w");
   // bruteForce_printToFile_2p2h (f1, smax, phi, phib, kmax, Mref);
@@ -81,8 +85,11 @@ main()
   // symm_printToFile_3p3h(f4, smax, phi, phib, kmax, Mref);
   // fclose(f4);
   //
-  bruteForce_eval_4p4h(smax, phib, kmax, Mref);
-  symm_eval_4p4h(smax, phi, phib, kmax, Mref);
+  // bruteForce_eval_4p4h(smax, phib, kmax, Mref);
+  // symm_eval_4p4h(smax, phi, phib, kmax, Mref);
+
+  bruteForce_eval_5p5h(smax, phib, kmax, Mref);
+  symm_eval_5p5h(smax, phi, phib, kmax, Mref);
 
   free(phi);
 }
