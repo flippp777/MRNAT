@@ -493,7 +493,7 @@ bruteForce_eval_4p4h(int smax, mpz_t phib[], int kmax, int Mref)
 
   int cases = p4h + p3h + p2h + p1h + p0h;
   int contributions = p4h_contr + p3h_contr + p2h_contr + p1h_contr + p0h_contr;
-  unsigned long steps = p3h_steps + p3h_steps + p2h_steps + p1h_steps + p0h_steps;
+  unsigned long steps = p4h_steps + p3h_steps + p2h_steps + p1h_steps + p0h_steps;
 
   printf("### Brute Force Evaluation 4p4h ###\n");
   printf("\n");
