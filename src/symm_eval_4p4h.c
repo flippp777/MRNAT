@@ -290,7 +290,7 @@ symm_eval_4p4h(mp_bitcnt_t smax,
         mp_bitcnt_t p_state;
         mp_bitcnt_t h_state;
         get_npnh(&p_state, &h_state, ph_num, phi_ph, phi_nub);
-        p2h_steps += 2;
+        p1h_steps += 2;
 
         mp_bitcnt_t* particles[] = { &s1, &s2, &s3, &p_state };
         mp_bitcnt_t* holes[] = { &s1, &s2, &s3, &h_state };
