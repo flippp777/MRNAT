@@ -224,7 +224,7 @@ symm_eval_5p5h(mp_bitcnt_t smax,
           &s1, &s2, &p_state[0], &p_state[1], &p_state[2]
         };
         mp_bitcnt_t* holes[] = {
-          &s1, &s2, &h_state[0], &h_state[1], &p_state[2]
+          &s1, &s2, &h_state[0], &h_state[1], &h_state[2]
         };
 
         mp_bitcnt_t** h_perms;
