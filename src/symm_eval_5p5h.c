@@ -8,6 +8,8 @@
 #include "../include/quickperm.h"
 #include "../include/symm_eval.h"
 #include <gmp.h>
+#include <omp.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -40,36 +42,37 @@ symm_eval_5p5h(mp_bitcnt_t smax,
 
   // Values for comparisons
   int p5h = 0; // Number of 5p5h case
-  int p5h_contr = 0;
-  int p5h_pos = 0;
-  int p5h_neg = 0;
+  uint64_t p5h_contr = 0;
+  uint64_t p5h_pos = 0;
+  uint64_t p5h_neg = 0;
   unsigned long p5h_steps = 0;
   int p4h = 0; // Number of 4p4h case
-  int p4h_contr = 0;
-  int p4h_pos = 0;
-  int p4h_neg = 0;
+  uint64_t p4h_contr = 0;
+  uint64_t p4h_pos = 0;
+  uint64_t p4h_neg = 0;
   unsigned long p4h_steps = 0;
   int p3h = 0; // Number of 3p3h case
-  int p3h_contr = 0;
-  int p3h_pos = 0;
-  int p3h_neg = 0;
+  uint64_t p3h_contr = 0;
+  uint64_t p3h_pos = 0;
+  uint64_t p3h_neg = 0;
   unsigned long p3h_steps = 0;
   int p2h = 0; // Number of 2p2h case
-  int p2h_contr = 0;
-  int p2h_pos = 0;
-  int p2h_neg = 0;
+  uint64_t p2h_contr = 0;
+  uint64_t p2h_pos = 0;
+  uint64_t p2h_neg = 0;
   unsigned long p2h_steps = 0;
   int p1h = 0; // Number of 1p1h case
-  int p1h_contr = 0;
-  int p1h_pos = 0;
-  int p1h_neg = 0;
+  uint64_t p1h_contr = 0;
+  uint64_t p1h_pos = 0;
+  uint64_t p1h_neg = 0;
   unsigned long p1h_steps = 0;
   int p0h = 0; // Number of 0p0h case
-  int p0h_contr = 0;
-  int p0h_pos = 0;
-  int p0h_neg = 0;
+  uint64_t p0h_contr = 0;
+  uint64_t p0h_pos = 0;
+  uint64_t p0h_neg = 0;
   unsigned long p0h_steps = 0;
 
+#pragma omp for
   for (mu = 0; mu < Mref; mu++) {
 
     for (nu = 0; nu < Mref; nu++) {
@@ -577,7 +580,7 @@ symm_eval_5p5h(mp_bitcnt_t smax,
   mpz_clears(phi_ph, phi_nub, phi_nub_exc, NULL);
 
   int cases = p5h + p4h + p3h + p2h + p1h + p0h;
-  int contributions =
+  uint64_t contributions =
     p5h_contr + p4h_contr + p3h_contr + p2h_contr + p1h_contr + p0h_contr;
   unsigned long steps =
     p5h_steps + p4h_steps + p3h_steps + p2h_steps + p1h_steps + p0h_steps;
@@ -586,85 +589,85 @@ symm_eval_5p5h(mp_bitcnt_t smax,
   printf("\n");
 
   printf("Number of Cases:          %d  =>  100%%\n", cases);
-  printf("Number of Contributions:  %d  =>  100%%\n", contributions);
+  printf("Number of Contributions:  %lu  =>  100%%\n", contributions);
   printf("Number of Steps:          %lu  =>  100%%\n", steps);
   printf("\n");
 
   printf("  Number of 0p0h-Cases:         %d  =>  %f%%\n",
          p0h,
          (float)p0h / cases * 100);
-  printf("  Number of 0p0h-Contributions: %d  =>  %f%%\n",
+  printf("  Number of 0p0h-Contributions: %lu  =>  %f%%\n",
          p0h_contr,
          (float)p0h_contr / contributions * 100);
   printf("  Number of 0p0h-Steps:         %lu  =>  %f%%\n",
          p0h_steps,
          (float)p0h_steps / steps * 100);
-  printf("    Number of +1 0p0h-Contributions: %d\n", p0h_pos);
-  printf("    Number of -1 0p0h-Contributions: %d\n", p0h_neg);
+  printf("    Number of +1 0p0h-Contributions: %lu\n", p0h_pos);
+  printf("    Number of -1 0p0h-Contributions: %lu\n", p0h_neg);
   printf("\n");
 
   printf("  Number of 1p1h-Cases:         %d  =>  %f%%\n",
          p1h,
          (float)p1h / cases * 100);
-  printf("  Number of 1p1h-Contributions: %d  =>  %f%%\n",
+  printf("  Number of 1p1h-Contributions: %lu  =>  %f%%\n",
          p1h_contr,
          (float)p1h_contr / contributions * 100);
   printf("  Number of 1p1h-Steps:         %lu  =>  %f%%\n",
          p1h_steps,
          (float)p1h_steps / steps * 100);
-  printf("    Number of +1 1p1h-Contributions: %d\n", p1h_pos);
-  printf("    Number of -1 1p1h-Contributions: %d\n", p1h_neg);
+  printf("    Number of +1 1p1h-Contributions: %lu\n", p1h_pos);
+  printf("    Number of -1 1p1h-Contributions: %lu\n", p1h_neg);
   printf("\n");
 
   printf("  Number of 2p2h-Cases:         %d  =>  %f%%\n",
          p2h,
          (float)p2h / cases * 100);
-  printf("  Number of 2p2h-Contributions: %d  =>  %f%%\n",
+  printf("  Number of 2p2h-Contributions: %lu  =>  %f%%\n",
          p2h_contr,
          (float)p2h_contr / contributions * 100);
   printf("  Number of 2p2h-Steps:         %lu  =>  %f%%\n",
          p2h_steps,
          (float)p2h_steps / steps * 100);
-  printf("    Number of +1 2p2h-Contributions: %d\n", p2h_pos);
-  printf("    Number of -1 2p2h-Contributions: %d\n", p2h_neg);
+  printf("    Number of +1 2p2h-Contributions: %lu\n", p2h_pos);
+  printf("    Number of -1 2p2h-Contributions: %lu\n", p2h_neg);
   printf("\n");
 
   printf("  Number of 3p3h-Cases:         %d  =>  %f%%\n",
          p3h,
          (float)p3h / cases * 100);
-  printf("  Number of 3p3h-Contributions: %d  =>  %f%%\n",
+  printf("  Number of 3p3h-Contributions: %lu  =>  %f%%\n",
          p3h_contr,
          (float)p3h_contr / contributions * 100);
   printf("  Number of 3p3h-Steps:         %lu  =>  %f%%\n",
          p3h_steps,
          (float)p3h_steps / steps * 100);
-  printf("    Number of +1 3p3h-Contributions: %d\n", p3h_pos);
-  printf("    Number of -1 3p3h-Contributions: %d\n", p3h_neg);
+  printf("    Number of +1 3p3h-Contributions: %lu\n", p3h_pos);
+  printf("    Number of -1 3p3h-Contributions: %lu\n", p3h_neg);
   printf("\n");
 
   printf("  Number of 4p4h-Cases:         %d  =>  %f%%\n",
          p4h,
          (float)p4h / cases * 100);
-  printf("  Number of 4p4h-Contributions: %d  =>  %f%%\n",
+  printf("  Number of 4p4h-Contributions: %lu  =>  %f%%\n",
          p4h_contr,
          (float)p4h_contr / contributions * 100);
   printf("  Number of 4p4h-Steps:         %lu  =>  %f%%\n",
          p4h_steps,
          (float)p4h_steps / steps * 100);
-  printf("    Number of +1 4p4h-Contributions: %d\n", p4h_pos);
-  printf("    Number of -1 4p4h-Contributions: %d\n", p4h_neg);
+  printf("    Number of +1 4p4h-Contributions: %lu\n", p4h_pos);
+  printf("    Number of -1 4p4h-Contributions: %lu\n", p4h_neg);
   printf("\n");
 
   printf("  Number of 5p5h-Cases:         %d  =>  %f%%\n",
          p5h,
          (float)p5h / cases * 100);
-  printf("  Number of 5p5h-Contributions: %d  =>  %f%%\n",
+  printf("  Number of 5p5h-Contributions: %lu  =>  %f%%\n",
          p5h_contr,
          (float)p5h_contr / contributions * 100);
   printf("  Number of 5p5h-Steps:         %lu  =>  %f%%\n",
          p5h_steps,
          (float)p5h_steps / steps * 100);
-  printf("    Number of +1 5p5h-Contributions: %d\n", p5h_pos);
-  printf("    Number of -1 5p5h-Contributions: %d\n", p5h_neg);
+  printf("    Number of +1 5p5h-Contributions: %lu\n", p5h_pos);
+  printf("    Number of -1 5p5h-Contributions: %lu\n", p5h_neg);
   printf("\n");
 }

@@ -78,13 +78,13 @@ main()
   // bruteForce_eval_2p2h (states, statesB, smax, phi, phib, kmax, Mref);
   // symm_eval_2p2h (states, statesB, smax, phi, phib, kmax, Mref);
 
-  // FILE* f3 = fopen("bruteForceBitEval_smax8_kmax4_3p3h.txt", "w");
+  // FILE* f3 = fopen("bruteForceBitEval_smax10_kmax5_3p3h.txt", "w");
   // bruteForce_printToFile_3p3h(f3, smax, phi, phib, kmax, Mref);
   // fclose(f3);
-  // FILE* f4 = fopen("symmBitEval_smax8_kmax4_3p3h.txt", "w");
+  // FILE* f4 = fopen("symmBitEval_smax10_kmax5_3p3h.txt", "w");
   // symm_printToFile_3p3h(f4, smax, phi, phib, kmax, Mref);
   // fclose(f4);
-  //
+
   // bruteForce_eval_4p4h(smax, phib, kmax, Mref);
   // symm_eval_4p4h(smax, phi, phib, kmax, Mref);
 
