@@ -396,8 +396,8 @@ symm_eval_5p5h(mp_bitcnt_t smax,
         get_npnh(&p_state, &h_state, ph_num, phi_ph, phi_nub);
         p1h_steps += 2;
 
-        mp_bitcnt_t* particles[] = { &s1, &s2, &s3, &p_state };
-        mp_bitcnt_t* holes[] = { &s1, &s2, &s3, &h_state };
+        mp_bitcnt_t* particles[] = { &s1, &s2, &s3, &s4, &p_state };
+        mp_bitcnt_t* holes[] = { &s1, &s2, &s3, &s4, &h_state };
 
         mp_bitcnt_t** h_perms;
         quickperm_ptr(holes, n, &h_perms, &perm_count);
