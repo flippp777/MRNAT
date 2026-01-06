@@ -1,6 +1,7 @@
 #include "../include/count_bits_right.h"
 #include "../include/get_npnh.h"
 #include "../include/hash.h"
+#include "../include/hash_primitive.h"
 #include "../include/permute.h"
 #include "../include/printToFile.h"
 #include "../include/printb.h"
