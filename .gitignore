@@ -1,3 +1,5 @@
 build/
 build/bin
 build/obj
+compile_commands.json
+.cache/
