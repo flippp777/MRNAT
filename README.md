@@ -23,3 +23,7 @@ gcc -O2 -o mrnat src/*.c -lgmp -lm
 ```
 
 The number of single-particle states, the particle number and the reference determinants are set directly in `src/main.c`.
+
+## License
+
+[MIT](LICENSE)
